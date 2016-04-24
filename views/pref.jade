@@ -1,0 +1,23 @@
+if(headers && headers['content-language'])
+	.link-group
+
+		if(headers['content-language'] == 'en-US')
+			a.pref-settings(data-pref='zh_CN' ,href='#')
+				span.active 偏好中文
+		else
+			span.curr 已设置中文
+	
+		if(headers['content-language'] == 'zh-US')
+			a.pref-settings(data-pref='en', href='#')
+				span.active 偏好英文
+		else
+			span.curr 已设置英文
+		a#pref-notice 
+	.link-group
+		a#pref-warn en模式进行中文搜索首页无相关关键字
+	.link-group
+		a#pref-warn 最新动态：即将接入alphabet镜像！
+		
+	.link-group
+		a#pref-warn power by baidu simple 2.0
+	

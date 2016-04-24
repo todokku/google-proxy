@@ -1,0 +1,61 @@
+<html>
+<head>
+	
+	<link rel="stylesheet" type="text/css" href="./css/style.css">
+	<script src="http://cdn.bootcss.com/jquery/2.1.1/jquery.min.js"></script>
+	<script type="text/javascript" src="./js/jvalid.js"></script>
+	<script type="text/javascript" src="./js/prettyform.js"></script>
+	<script type="text/javascript">
+		var form;
+		$(function(){
+			$.validateform({
+				id:"q"	//required
+			});
+			
+		});
+	</script>
+</head>
+<body >
+	
+		<form id="q">
+			<div class="form-item">
+				<input type="text" name="mobilenum" req>
+			</div>
+
+			<div class="form-item">
+				<input type="password" id="pass" name ="password"  req max="3">
+			</div>
+
+			<div class="form-item">
+				<input type="password" name ="repass" eq="pass">
+			</div>
+		
+			<div class="form-item">
+				<select>
+					<option ></option>
+					<option value="1">1</option>
+					<option value="2">2</option>
+				</select>
+			</div>
+		
+			<div class="form-item">
+				<textarea name="context" remote="return this.value == 'ablc'" tip="ddd" succ="aa" msg="{0}==ablc"></textarea>
+			</div>
+
+			<div class="form-item">
+				<input type="file" req/>
+			</div>
+		
+			<div class="form-item">
+				<input req type="checkbox" name="aggree">同意协议
+			</div>
+			
+			<div class="form-item">
+				<input type="submit" value="注册"/>
+			</div>
+		
+		</form>
+	</div>
+
+</body>
+</html>

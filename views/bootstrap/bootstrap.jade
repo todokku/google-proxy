@@ -1,0 +1,98 @@
+doctype html
+html(lang="zh-CN")
+  head
+    meta(charset="utf-8")
+    meta(http-equiv="X-UA-Compatible", content="IE=edge")
+    meta(name="viewport", content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no")
+    // 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！
+    script(type="text/javascript", src="https://cdn.bootcss.com/jquery/2.1.1/jquery.min.js")
+    script(type="text/javascript", src="/js/backbone/underscore-min.js")
+    script(type="text/javascript", src="/js/backbone/backbone-min.js")
+    // 新 Bootstrap 核心 CSS 文件
+    link(rel="stylesheet", href="//cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap.min.css")
+    // 可选的Bootstrap主题文件（一般不用引入）
+    // <link rel="stylesheet" href="//cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+    // jQuery文件。务必在bootstrap.min.js 之前引入
+    // 最新的 Bootstrap 核心 JavaScript 文件
+    script(src="//cdn.bootcss.com/bootstrap/3.3.5/js/bootstrap.min.js")
+    
+    
+    
+    link(href="//cdnjs.cloudflare.com/ajax/libs/x-editable/1.5.0/bootstrap3-editable/css/bootstrap-editable.css", rel="stylesheet")
+    script(src="//cdnjs.cloudflare.com/ajax/libs/x-editable/1.5.0/bootstrap3-editable/js/bootstrap-editable.min.js")
+    
+    script(type="text/javascript", src="/js/backbone/article.js")
+
+    
+    script#row_template(type="text/template").
+        <td class="text-center" data-type="text" data-title="title" ><%-model.title%></td>
+        <td class="text-center" data-type="text" data-title="content" ><%-model.content%></td>
+        <td class="text-center"><%-model.createTime%></td>
+        <td>
+            <div role="group" aria-label="operation" class="btn-group btn-group-xs">
+                <button type="button" class="btn btn-default">查看</button>
+                <button type="button" class="btn btn-default">修改</button>
+                <button type="button" class="btn btn-default">删除</button>
+            </div>
+        </td>
+        
+    script#btn_template(type="text/template").
+        <button type="button" class="btn btn-default" data-page="<%- model.page%>"><%-model.key%></button>
+  body
+    .container
+        .container-fluid
+            .row
+                .col-xs-12.col-sm-8.col-md-4.col-lg-4
+                    .panel.panel-info
+                        .panel-heading
+                            h3.panel-title title1
+                        .panel-body body
+                .col-xs-12.col-sm-8.col-md-4.col-lg-4
+                    .panel.panel-warning
+                        .panel-heading
+                            h3.panel-title title2
+                        .panel-body 
+                            li item1
+                            li item2
+                        
+                .col-xs-12.col-sm-8.col-md-4.col-lg-4
+                    .panel.panel-success
+                        .panel-heading
+                            h3.panel-title title2
+                        .panel-body body2
+                .clearfix
+            
+            .table-responsive
+                table#table.table.table-striped.table-hover.table-condensed.table-bordered
+                    thead
+                        tr.info
+                            th.text-primary.text-center title
+                            th.text-primary.text-center content
+                            th.text-primary.text-center createTime
+                            th.text-primary.text-center operation
+                    tbody
+                    tfoot
+                        tr
+                            td(colspan='4')
+                                .btn-toolbar(role="toolbar", aria-label="pagination")
+                                    .btn-group.btn-group-sm(role="group", aria-label="indicate")
+                                        .btn-group.input-group.input-group-sm(role="group", aria-label="topage")
+                                            input.form-control(type="text", placeholder="page")
+                                            span.input-group-btn
+                                                button.btn.btn-default(type="button") 转到
+                                    .btn-group.btn-group-sm.pull-right(role="group", aria-label="nav")
+                                    
+                                       
+                         tr
+                            td(colspan='4')
+                                .btn-toolbar(role="toolbar", aria-label="search-box")
+                                    .btn-group(role="group", aria-label="record")
+                                        small n条记录
+                                    
+                                    .btn-group.input-group.input-group-sm.pull-right(role="group", aria-label="search")
+                                        input.form-control(type="text", placeholder="search for any cloumn")
+                                        span.input-group-btn
+                                            button.btn.btn-default(type="button") go
+                                    
+                                
+                            

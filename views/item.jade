@@ -1,0 +1,11 @@
+li.search-item
+	if(item.link.constructor == Array)
+		div= item.title
+		for link in item.link
+			a(href= link.href, target='_blank')
+				img(src= link.src)
+	else
+		a(href=item.link, target='_blank')= item.title
+		div= item.description
+			span
+				a.soft-link(href= '/redirect?url=' + item.link, target='_blank') SNAPSHOT

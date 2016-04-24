@@ -1,0 +1,56 @@
+html
+	include header
+	script(type='text/javascript').
+		$(function(){
+			$.prettyform({
+				id:"query",	//required
+				active:false//任一表单值发生改变，每个表单项都重新检测，使用eq时推荐开启 默认false
+			});	
+
+			$('#search-box').keyup(function(){
+				//$.ajax({
+				//	url: 'https://autocomplete-gsa.search.aol.com/autocomplete/get?q='+ $(this).val() +'&it=gsa-wow-search&locale=zh_CN,zh_*,*_CN,*&count=8&output=json&cb=autosuggest&echo=off',
+				//	dataType: 'jsonp'
+				//});
+				$.ajax({
+					url: '/autosuggest?q=' + $(this).val(),
+					type: 'get',
+					dataType: 'json'
+				}).done(autosuggest);
+			});
+			
+			$('.pref-settings').each(function(){
+				$(this).click(function(){
+					var setting =$(this).data('pref');
+					$.ajax({
+						url: '/pref?language=' + setting,
+						type: 'get'
+					}).done(function(r){
+						$('#pref-notice').text('设置' + setting  + ' ' + r  +'!').css('color','#f03').show().fadeOut(3000);
+						window.location.reload();
+					});
+				});
+			});
+			$(document).click(function(e) {
+		    	$('.auto-complete-box').empty();
+			});
+		});
+
+		window.autosuggest = function(data){
+			var $autocomplete = $('.auto-complete-box');
+			$autocomplete.empty();
+
+			$(data[1]).each(function(i, text){
+
+				var target = $('<div></div>').attr('class','auto-complete-item').text(text).click(function(){
+					$('#search-box').val($(this).text());
+					$('#query').submit();
+				});
+
+				$autocomplete.append(target);
+			});
+		};
+
+		
+	body
+	block content

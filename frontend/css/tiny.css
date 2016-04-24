@@ -1,0 +1,95 @@
+.container{
+    overflow: hidden;
+    width: 100% !important;
+}
+
+.container .content-left{
+    float: left;
+    padding-left: 10px;
+    width: 95% !important;
+}
+
+.container .content-right{
+    float: left;
+    padding-left: 10px;
+    width: 95% !important;
+}
+
+.page.link-group {
+    padding: 10px;
+    overflow-x: auto;
+}
+
+::-webkit-scrollbar {
+  height: 2px;
+}
+
+.auto-complete-box{
+    left: 20px;
+    top: 52px;
+}
+
+.footer{
+    padding-left: 10px;
+}
+
+.flip-container{
+    display:none;
+}
+
+#query{
+    padding: 0;
+}
+
+#search-box{
+    float:left;
+    margin-left: 20px;
+    width:60% !important;
+}
+
+#query input.submit-btn{    
+    float:left;
+    width:30% !important;
+}
+
+.item-info{
+    display:none !important;
+}
+
+.form-item{
+    margin-bottom: 10px;
+}
+
+.header{
+    height: 65px;
+}
+
+.content .page ul.newstab {
+    float: left;
+    width: 50%;
+}
+
+.content .page ul.newstab .newsarea{
+    margin: 10px 5px 10px 5px;
+}
+
+
+.content .page:nth-child(1) {
+    /*background-image: url('http://www.lorempixum.com/300/100/?1');*/
+}
+.content .page:nth-child(2) {
+    /*background-image: url('http://www.lorempixum.com/300/100/?2');*/
+}
+.content .page:nth-child(3) {
+    /*background-image: url('http://www.lorempixum.com/300/100/?3');*/
+}
+.content .page:nth-child(4) {
+    /*background-image: url('http://www.lorempixum.com/300/100/?4');*/
+}
+
+.newsarea{
+    margin: 5px;
+    border: 0px;
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.33);
+    border-radius: 3px;
+}

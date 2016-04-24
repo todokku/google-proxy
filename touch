@@ -1,0 +1,5 @@
+#!/bin/bash
+export rm /data/db/mongod.lock
+mongod --repair
+mongod --bind_ip=127.0.0.1 --nojournal
+node index.js -p 8080

@@ -1,0 +1,16 @@
+html
+	include header
+
+body
+	form(action='/oauth/authorize' ,method='post')
+		.container
+			input(name='client_id' style='display:none;' value= clientId)
+			input(name='redirect_uri' style='display:none;' value= redirectUri)
+			input(name='response_type' style='display:none;' value= 'code')
+			div.form-item
+				input.text-input(name='username', type='text', tip='用户名', msg='.info-err', tip-msg='.info-tip', succ-msg='.info-succ', req='', autocomplete='off')
+			div.form-item
+				input.text-input(name='password', type='password', tip='密码', msg='.info-err', tip-msg='.info-tip', succ-msg='.info-succ', req='', autocomplete='off')
+			
+			input.btn.submit-btn(type='submit', value='授权登陆')
+				
