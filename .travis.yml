@@ -8,4 +8,4 @@ after_success:
   - chmod 600 id_rsa # this key should have push access 
   - ssh-add id_rsa
   - git remote add deploy ssh://root@23.105.213.131:27620/root/proxy/dotstack.git
-  - git push deploy 
+  - git push deploy master
