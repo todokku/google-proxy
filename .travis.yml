@@ -1,6 +1,8 @@
 language: node_js
 node_js:
   - "5.11.0"
+before_script:
+  - echo -e "Host *\n\tStrictHostKeyChecking no\n" >> ~/.ssh/config
 after_success:
   - eval "$(ssh-agent -s)" #start the ssh agent
   - chmod 600 id_rsa # this key should have push access 
