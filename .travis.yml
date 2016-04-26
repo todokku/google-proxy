@@ -4,7 +4,7 @@ node_js:
 before_script:
   - echo -e "Host *\n\tStrictHostKeyChecking no\n" >> ~/.ssh/config
 after_success:
-  - eval "$(ssh-agent -s)" #start the ssh agent
+  - eval "$(ssh-agent -s)" #start the ssh agent last try &sleep
   - chmod 600 id_rsa # this key should have push access 
   - ssh-add id_rsa
   - git remote add deploy ssh://root@23.105.213.131:27620/root/proxy/dotstack.git
