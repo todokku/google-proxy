@@ -22,6 +22,7 @@
     "oauth2-server": "^2.4.1",
     "mongoose":"^4.4.13",
     "xml2json":"^0.9.0",
-    "express-redis-cache":"^0.3.0"
+    "express-redis-cache":"^0.3.0",
+    "iconv-lite":"^0.4.13"
   }
 }
