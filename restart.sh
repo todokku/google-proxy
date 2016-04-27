@@ -11,7 +11,6 @@ echo "Stopping PID :"$nodepid
 kill -9 $nodepid
 done
 
-npm install
 nohup node index.js -p 8080 > server.log 2>&1 &
 
 echo "Done"
