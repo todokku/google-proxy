@@ -45,3 +45,22 @@
 2016-04-28T18:40:52.546+0000 [clientcursormon] mem (MB) res:76 virt:308
 2016-04-28T18:40:52.546+0000 [clientcursormon]  mapped:160
 2016-04-28T18:40:52.546+0000 [clientcursormon]  connections:5
+2016-04-28T18:45:52.593+0000 [clientcursormon] mem (MB) res:76 virt:308
+2016-04-28T18:45:52.593+0000 [clientcursormon]  mapped:160
+2016-04-28T18:45:52.593+0000 [clientcursormon]  connections:5
+2016-04-28T18:48:12.131+0000 [conn12] end connection 127.0.0.1:40696 (4 connections now open)
+2016-04-28T18:48:12.132+0000 [conn11] end connection 127.0.0.1:40694 (3 connections now open)
+2016-04-28T18:48:12.132+0000 [conn15] end connection 127.0.0.1:40702 (2 connections now open)
+2016-04-28T18:48:12.132+0000 [conn13] end connection 127.0.0.1:40698 (1 connection now open)
+2016-04-28T18:48:12.133+0000 [conn14] end connection 127.0.0.1:40700 (0 connections now open)
+2016-04-28T18:48:20.458+0000 [initandlisten] connection accepted from 127.0.0.1:37454 #16 (1 connection now open)
+2016-04-28T18:48:20.458+0000 [initandlisten] connection accepted from 127.0.0.1:37456 #17 (2 connections now open)
+2016-04-28T18:48:20.459+0000 [initandlisten] connection accepted from 127.0.0.1:37458 #18 (3 connections now open)
+2016-04-28T18:48:20.459+0000 [initandlisten] connection accepted from 127.0.0.1:37460 #19 (4 connections now open)
+2016-04-28T18:48:20.459+0000 [initandlisten] connection accepted from 127.0.0.1:37462 #20 (5 connections now open)
+2016-04-28T18:50:52.620+0000 [clientcursormon] mem (MB) res:53 virt:308
+2016-04-28T18:50:52.620+0000 [clientcursormon]  mapped:160
+2016-04-28T18:50:52.620+0000 [clientcursormon]  connections:5
+2016-04-28T18:55:52.646+0000 [clientcursormon] mem (MB) res:53 virt:308
+2016-04-28T18:55:52.646+0000 [clientcursormon]  mapped:160
+2016-04-28T18:55:52.646+0000 [clientcursormon]  connections:5
