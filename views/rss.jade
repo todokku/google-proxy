@@ -3,20 +3,20 @@ if(rss && rss.channel && rss.channel.item)
 		- for (var i = 0; i < Math.floor(rss.channel.item.length/2); ++i)	{
 			li.newsarea
 				- var item = rss.channel.item[i]
-				span= '[' + item.source + ']'
+				span= '[' + item.source.$cd + ']'
 				&nbsp;
-				a(target='_blank' href= item.link title= item.title)= item.title
-				span.pub-date= item.pubDate.replace(/T/,' ').replace(/.000Z/g,'')
+				a(target='_blank' href= item.link.$cd title= item.title.$cd)= item.title.$cd
+				span.pub-date= item.pubDate .$cd.replace(/T/,' ').replace(/.000Z/g,'')
 		-}
 	
 	ul.newstab
 		- for (i = Math.floor(rss.channel.item.length/2); i < Math.floor(rss.channel.item.length); ++i){
 			li.newsarea
 				- var item = rss.channel.item[i]
-				span= '[' + item.source + ']'
+				span= '[' + item.source.$cd + ']'
 				&nbsp;
-				a(target='_blank' href= item.link title= item.title)= item.title
-				span.pub-date= item.pubDate.replace(/T/,' ').replace(/.000Z/g,'')
+				a(target='_blank' href= item.link.$cd title= item.title.$cd)= item.title.$cd
+				span.pub-date= item.pubDate.$cd.replace(/T/,' ').replace(/.000Z/g,'')
 		-}
 		
 		
