@@ -21,7 +21,7 @@
     "request": "^2.60.0",
     "oauth2-server": "^2.4.1",
     "mongoose":"^4.4.13",
-    "node-xml2json":"^1.0.0",
+    "simple-xml2json":"^1.2.3",
     "express-redis-cache":"^0.3.0",
     "iconv-lite":"^0.4.13"
   }
