@@ -1,16 +1,8 @@
 Cute files is running on port 8080
-start!
+connection error! { [MongoError: connect ECONNREFUSED] name: 'MongoError', message: 'connect ECONNREFUSED' }
 Warning: missing space before text for line 7 of jade file "/home/ubuntu/workspace/views/rss.jade"
 Warning: missing space before text for line 17 of jade file "/home/ubuntu/workspace/views/rss.jade"
-Warning: missing space before text for line 25 of jade file "/home/ubuntu/workspace/views/home.jade"
-Warning: missing space before text for line 32 of jade file "/home/ubuntu/workspace/views/home.jade"
-Warning: missing space before text for line 34 of jade file "/home/ubuntu/workspace/views/home.jade"
-Warning: missing space before text for line 92 of jade file "/home/ubuntu/workspace/views/home.jade"
-Warning: missing space before text for line 94 of jade file "/home/ubuntu/workspace/views/home.jade"
-Warning: missing space before text for line 25 of jade file "/home/ubuntu/workspace/views/home.jade"
-Warning: missing space before text for line 32 of jade file "/home/ubuntu/workspace/views/home.jade"
-Warning: missing space before text for line 34 of jade file "/home/ubuntu/workspace/views/home.jade"
-Warning: missing space before text for line 92 of jade file "/home/ubuntu/workspace/views/home.jade"
-Warning: missing space before text for line 94 of jade file "/home/ubuntu/workspace/views/home.jade"
+Warning: missing space before text for line 7 of jade file "/home/ubuntu/workspace/views/rss.jade"
+Warning: missing space before text for line 17 of jade file "/home/ubuntu/workspace/views/rss.jade"
 Warning: missing space before text for line 7 of jade file "/home/ubuntu/workspace/views/rss.jade"
 Warning: missing space before text for line 17 of jade file "/home/ubuntu/workspace/views/rss.jade"

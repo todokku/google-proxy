@@ -1,11 +1,11 @@
-[736] 23 Apr 03:46:20.125 # Warning: no config file specified, using the default config. In order to specify a config file use redis-server /path/to/redis.conf
+[3279] 28 Apr 18:14:54.688 # Warning: no config file specified, using the default config. In order to specify a config file use redis-server /path/to/redis.conf
                 _._                                                  
            _.-``__ ''-._                                             
       _.-``    `.  `_.  ''-._           Redis 2.8.4 (00000000/0) 64 bit
   .-`` .-```.  ```\/    _.,_ ''-._                                   
  (    '      ,       .-`  | `,    )     Running in stand alone mode
  |`-._`-...-` __...-.``-._|'` _.-'|     Port: 6379
- |    `-._   `._    /     _.-'    |     PID: 736
+ |    `-._   `._    /     _.-'    |     PID: 3279
   `-._    `-._  `-./  _.-'    _.-'                                   
  |`-._`-._    `-.__.-'    _.-'_.-'|                                  
  |    `-._`-._        _.-'_.-'    |           http://redis.io        
@@ -17,27 +17,7 @@
           `-._        _.-'                                           
               `-.__.-'                                               
 
-[736] 23 Apr 03:46:20.126 # Server started, Redis version 2.8.4
-[736] 23 Apr 03:46:20.126 # WARNING overcommit_memory is set to 0! Background save may fail under low memory condition. To fix this issue add 'vm.overcommit_memory = 1' to /etc/sysctl.conf and then reboot or run the command 'sysctl vm.overcommit_memory=1' for this to take effect.
-[736] 23 Apr 03:46:20.185 * DB loaded from disk: 0.059 seconds
-[736] 23 Apr 03:46:20.185 * The server is now ready to accept connections on port 6379
-[736] 23 Apr 04:46:21.057 * 1 changes in 3600 seconds. Saving...
-[736] 23 Apr 04:46:21.058 * Background saving started by pid 778
-[778] 23 Apr 04:46:21.140 * DB saved on disk
-[778] 23 Apr 04:46:21.140 * RDB: 0 MB of memory used by copy-on-write
-[736] 23 Apr 04:46:21.158 * Background saving terminated with success
-[736] 23 Apr 06:50:28.913 * 1 changes in 3600 seconds. Saving...
-[736] 23 Apr 06:50:28.914 * Background saving started by pid 783
-[783] 23 Apr 06:50:29.009 * DB saved on disk
-[783] 23 Apr 06:50:29.010 * RDB: 0 MB of memory used by copy-on-write
-[736] 23 Apr 06:50:29.172 * Background saving terminated with success
-[736] 23 Apr 07:50:30.036 * 1 changes in 3600 seconds. Saving...
-[736] 23 Apr 07:50:30.037 * Background saving started by pid 1313
-[1313] 23 Apr 07:50:30.121 * DB saved on disk
-[1313] 23 Apr 07:50:30.122 * RDB: 0 MB of memory used by copy-on-write
-[736] 23 Apr 07:50:30.138 * Background saving terminated with success
-[736] 23 Apr 11:14:35.706 * 1 changes in 3600 seconds. Saving...
-[736] 23 Apr 11:14:35.710 * Background saving started by pid 3201
-[3201] 23 Apr 11:14:35.805 * DB saved on disk
-[3201] 23 Apr 11:14:35.806 * RDB: 0 MB of memory used by copy-on-write
-[736] 23 Apr 11:14:35.810 * Background saving terminated with success
+[3279] 28 Apr 18:14:54.690 # Server started, Redis version 2.8.4
+[3279] 28 Apr 18:14:54.690 # WARNING overcommit_memory is set to 0! Background save may fail under low memory condition. To fix this issue add 'vm.overcommit_memory = 1' to /etc/sysctl.conf and then reboot or run the command 'sysctl vm.overcommit_memory=1' for this to take effect.
+[3279] 28 Apr 18:14:54.749 * DB loaded from disk: 0.059 seconds
+[3279] 28 Apr 18:14:54.749 * The server is now ready to accept connections on port 6379
