@@ -14,3 +14,5 @@ after_success:
 before_install:
 - openssl aes-256-cbc -K $encrypted_26b4962af0e7_key -iv $encrypted_26b4962af0e7_iv
   -in id_rsa.enc -out id_rsa -d
+- git config --global user.email "609888703@qq.com"
+- git config --global user.name "zhiqiang.huang"
