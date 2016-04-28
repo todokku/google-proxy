@@ -42,3 +42,6 @@
 2016-04-28T18:35:52.525+0000 [clientcursormon] mem (MB) res:76 virt:308
 2016-04-28T18:35:52.525+0000 [clientcursormon]  mapped:160
 2016-04-28T18:35:52.526+0000 [clientcursormon]  connections:5
+2016-04-28T18:40:52.546+0000 [clientcursormon] mem (MB) res:76 virt:308
+2016-04-28T18:40:52.546+0000 [clientcursormon]  mapped:160
+2016-04-28T18:40:52.546+0000 [clientcursormon]  connections:5
