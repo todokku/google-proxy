@@ -13,12 +13,12 @@ block content
 								img(src= (root === '/s' && '/img/wow_logo.png' || '/img/google.png'))
 						.back 
 							a(href=reserve)
-								img(src=(root === '/s' && '/img/google.png' || '/img/wow_logo.png'))
+								img(src=(root === '/s' && '/img/google.png' || '/img/logo.png'))
 				input#search-box.text-input(name='q', value= keyword, type='text', tip='关键字', msg='.info-err', tip-msg='.info-tip', succ-msg='.info-succ', req='', autocomplete='off')
 				input.btn.submit-btn(type='submit', value='alphabet!')
 				span.item-info.info-succ Go
 				span.item-info.info-tip alphabet 搜索
-				span.item-info.info-err 关键字不能为空
+				span.item-info.info-err 请输入搜索内容
 
 	.header
 	
