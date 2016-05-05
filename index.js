@@ -100,7 +100,22 @@ app.get('/oauth/confirm', function(req, res){
 app.get('/oauth/client', oauthModel.generateClient);
 
 app.get('/bootstrap', function(req, res){
-	res.render('bootstrap/bootstrap',{});
+	var render = {
+		root: '/search',
+		reserve: '/s'
+	};
+	
+	if(!req.query.q){
+		res.render('bootstrap/index', render);
+		return ;
+	}
+	
+	google(req, res).search(req.query.q, req.query.page, req.query.orig).done(function(body){
+		//res.send(body);
+		res.render("bootstrap/index",extend(render,this.respJSON));
+	}).fail(function(error, resp, body){
+		res.send(body);
+	});
 })
 
 //客户授权成功页
@@ -118,7 +133,7 @@ app.get('/target', app.oauth.authorise(), function (req, res) {
 
 app.use(app.oauth.errorHandler());
 
-app.get('/',cache.route(), function(req, res, next){
+app.get('/', function(req, res, next){
 	req.url = '/search';
 	next();
 });
@@ -167,7 +182,7 @@ app.route('/articles/:id').get(function(req, res){
 	  });
 	  
 
-app.get('/search',cache.route(), function(req, res, next){
+app.get('/search',function(req, res, next){
 	var render = {
 		root: '/search',
 		reserve: '/s'
@@ -201,7 +216,8 @@ app.get('/rss',cache.route({
 	});
 });
 
-app.get('/s', cache.route(), function(req,res){
+//cache.route()
+app.get('/s', function(req,res){
 	var render = {
 		root: '/s',
 		reserve: '/search'
@@ -266,10 +282,6 @@ app.get('/pref', cache.route(), function(req, res){
 		}).fail(function(error){
 			res.send(error);
 		});
-});
-
-app.get('/baidu_verify_DJhoG9DAN9.html', function(request, response){
-    response.sendFile('baidu_verify_DJhoG9DAN9.html');
 });
 
 
