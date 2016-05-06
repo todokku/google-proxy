@@ -1,211 +1,26 @@
-2016-04-29T16:55:39.612+0000 [initandlisten] MongoDB starting : pid=1555 port=27017 dbpath=/data/db 64-bit host=pn_paradise-proxy_wow-1717758
-2016-04-29T16:55:39.612+0000 [initandlisten] db version v2.6.9
-2016-04-29T16:55:39.612+0000 [initandlisten] git version: df313bc75aa94d192330cb92756fc486ea604e64
-2016-04-29T16:55:39.613+0000 [initandlisten] build info: Linux build20.nj1.10gen.cc 2.6.32-431.3.1.el6.x86_64 #1 SMP Fri Jan 3 21:39:27 UTC 2014 x86_64 BOOST_LIB_VERSION=1_49
-2016-04-29T16:55:39.613+0000 [initandlisten] allocator: tcmalloc
-2016-04-29T16:55:39.613+0000 [initandlisten] options: { net: { bindIp: 2016-04-29T16:55:39.638+0000 [initandlisten] exception in 2016-04-29T16:55:39.885+0000 [initandlisten] waiting for connections on port 27017
-2016-04-29T16:55:42.424+0000 [initandlisten] connection accepted from 127.0.0.1:48294 #1 (1 connection now open)
-2016-04-29T16:55:42.424+0000 [initandlisten] connection accepted from 127.0.0.1:48296 #2 (2 connections now open)
-2016-04-29T16:55:42.426+0000 [initandlisten] connection accepted from 127.0.0.1:48298 #3 (3 connections now open)
-2016-04-29T16:55:42.426+0000 [initandlisten] connection accepted from 127.0.0.1:48300 #4 (4 connections now open)
-2016-04-29T16:55:42.426+0000 [initandlisten] connection accepted from 127.0.0.1:48302 #5 (5 connections now open)
-2016-04-29T16:56:39.759+0000 [clientcursormon] mem (MB) res:76 virt:308
-2016-04-29T16:56:39.759+0000 [clientcursormon]  mapped:160
-2016-04-29T16:56:39.760+0000 [clientcursormon]  connections:5
-2016-04-29T17:00:44.682+0000 [conn2] end connection 127.0.0.1:48296 (4 connections now open)
-2016-04-29T17:00:44.682+0000 [conn5] end connection 127.0.0.1:48302 (4 connections now open)
-2016-04-29T17:00:44.683+0000 [conn4] end connection 127.0.0.1:48300 (3 connections now open)
-2016-04-29T17:00:44.682+0000 [conn1] end connection 127.0.0.1:48294 (4 connections now open)
-2016-04-29T17:00:44.682+0000 [conn3] end connection 127.0.0.1:48298 (4 connections now open)
-2016-04-29T17:00:48.013+0000 [initandlisten] connection accepted from 127.0.0.1:40776 #6 (1 connection now open)
-2016-04-29T17:00:48.014+0000 [initandlisten] connection accepted from 127.0.0.1:40778 #7 (2 connections now open)
-2016-04-29T17:00:48.014+0000 [initandlisten] connection accepted from 127.0.0.1:40780 #8 (3 connections now open)
-2016-04-29T17:00:48.015+0000 [initandlisten] connection accepted from 127.0.0.1:40782 #9 (4 connections now open)
-2016-04-29T17:00:48.015+0000 [initandlisten] connection accepted from 127.0.0.1:40784 #10 (5 connections now open)
-2016-04-29T17:01:39.806+0000 [clientcursormon] mem (MB) res:76 virt:308
-2016-04-29T17:01:39.806+0000 [clientcursormon]  mapped:160
-2016-04-29T17:01:39.806+0000 [clientcursormon]  connections:5
-2016-04-29T17:01:48.344+0000 [conn6] end connection 127.0.0.1:40776 (4 connections now open)
-2016-04-29T17:01:48.344+0000 [conn10] end connection 127.0.0.1:40784 (4 connections now open)
-2016-04-29T17:01:48.344+0000 [conn7] end connection 127.0.0.1:40778 (4 connections now open)
-2016-04-29T17:01:48.344+0000 [conn8] end connection 127.0.0.1:40780 (4 connections now open)
-2016-04-29T17:01:48.344+0000 [conn9] end connection 127.0.0.1:40782 (4 connections now open)
-2016-04-29T17:02:00.357+0000 [initandlisten] connection accepted from 127.0.0.1:42306 #11 (1 connection now open)
-2016-04-29T17:02:00.358+0000 [initandlisten] connection accepted from 127.0.0.1:42308 #12 (2 connections now open)
-2016-04-29T17:02:00.359+0000 [initandlisten] connection accepted from 127.0.0.1:42310 #13 (3 connections now open)
-2016-04-29T17:02:00.359+0000 [initandlisten] connection accepted from 127.0.0.1:42312 #14 (4 connections now open)
-2016-04-29T17:02:00.360+0000 [initandlisten] connection accepted from 127.0.0.1:42314 #15 (5 connections now open)
-2016-04-29T17:02:16.976+0000 [conn11] end connection 127.0.0.1:42306 (4 connections now open)
-2016-04-29T17:02:16.977+0000 [conn14] end connection 127.0.0.1:42312 (3 connections now open)
-2016-04-29T17:02:16.977+0000 [conn13] end connection 127.0.0.1:42310 (2 connections now open)
-2016-04-29T17:02:16.977+0000 [conn12] end connection 127.0.0.1:42308 (2 connections now open)
-2016-04-29T17:02:16.977+0000 [conn15] end connection 127.0.0.1:42314 (1 connection now open)
-2016-04-29T17:02:19.854+0000 [initandlisten] connection accepted from 127.0.0.1:42692 #16 (1 connection now open)
-2016-04-29T17:02:19.855+0000 [initandlisten] connection accepted from 127.0.0.1:42694 #17 (2 connections now open)
-2016-04-29T17:02:19.855+0000 [initandlisten] connection accepted from 127.0.0.1:42696 #18 (3 connections now open)
-2016-04-29T17:02:19.856+0000 [initandlisten] connection accepted from 127.0.0.1:42698 #19 (4 connections now open)
-2016-04-29T17:02:19.857+0000 [initandlisten] connection accepted from 127.0.0.1:42700 #20 (5 connections now open)
-2016-04-29T17:03:14.361+0000 [conn17] end connection 127.0.0.1:42694 (4 connections now open)
-2016-04-29T17:03:14.361+0000 [conn19] end connection 127.0.0.1:42698 (4 connections now open)
-2016-04-29T17:03:14.361+0000 [conn18] end connection 127.0.0.1:42696 (4 connections now open)
-2016-04-29T17:03:14.361+0000 [conn16] end connection 127.0.0.1:42692 (4 connections now open)
-2016-04-29T17:03:14.362+0000 [conn20] end connection 127.0.0.1:42700 (0 connections now open)
-2016-04-29T17:03:17.411+0000 [initandlisten] connection accepted from 127.0.0.1:43836 #21 (1 connection now open)
-2016-04-29T17:03:17.412+0000 [initandlisten] connection accepted from 127.0.0.1:43838 #22 (2 connections now open)
-2016-04-29T17:03:17.413+0000 [initandlisten] connection accepted from 127.0.0.1:43840 #23 (3 connections now open)
-2016-04-29T17:03:17.414+0000 [initandlisten] connection accepted from 127.0.0.1:43842 #24 (4 connections now open)
-2016-04-29T17:03:17.414+0000 [initandlisten] connection accepted from 127.0.0.1:43844 #25 (5 connections now open)
-2016-04-29T17:04:27.945+0000 [conn21] end connection 127.0.0.1:43836 (4 connections now open)
-2016-04-29T17:04:27.946+0000 [conn23] end connection 127.0.0.1:43840 (3 connections now open)
-2016-04-29T17:04:27.946+0000 [conn22] end connection 127.0.0.1:43838 (3 connections now open)
-2016-04-29T17:04:27.946+0000 [conn24] end connection 127.0.0.1:43842 (1 connection now open)
-2016-04-29T17:04:27.947+0000 [conn25] end connection 127.0.0.1:43844 (0 connections now open)
-2016-04-29T17:04:30.276+0000 [initandlisten] connection accepted from 127.0.0.1:48394 #26 (1 connection now open)
-2016-04-29T17:04:30.276+0000 [initandlisten] connection accepted from 127.0.0.1:48396 #27 (2 connections now open)
-2016-04-29T17:04:30.277+0000 [initandlisten] connection accepted from 127.0.0.1:48398 #28 (3 connections now open)
-2016-04-29T17:04:30.278+0000 [initandlisten] connection accepted from 127.0.0.1:48400 #29 (4 connections now open)
-2016-04-29T17:04:30.278+0000 [initandlisten] connection accepted from 127.0.0.1:48402 #30 (5 connections now open)
-2016-04-29T17:06:39.834+0000 [clientcursormon] mem (MB) res:76 virt:308
-2016-04-29T17:06:39.834+0000 [clientcursormon]  mapped:160
-2016-04-29T17:06:39.834+0000 [clientcursormon]  connections:5
-2016-04-29T17:11:39.856+0000 [clientcursormon] mem (MB) res:76 virt:308
-2016-04-29T17:11:39.856+0000 [clientcursormon]  mapped:160
-2016-04-29T17:11:39.856+0000 [clientcursormon]  connections:5
-2016-04-29T17:16:39.905+0000 [clientcursormon] mem (MB) res:76 virt:308
-2016-04-29T17:16:39.906+0000 [clientcursormon]  mapped:160
-2016-04-29T17:16:39.906+0000 [clientcursormon]  connections:5
-2016-04-29T17:21:39.938+0000 [clientcursormon] mem (MB) res:76 virt:308
-2016-04-29T17:21:39.938+0000 [clientcursormon]  mapped:160
-2016-04-29T17:21:39.938+0000 [clientcursormon]  connections:5
-2016-04-29T17:26:39.956+0000 [clientcursormon] mem (MB) res:76 virt:308
-2016-04-29T17:26:39.957+0000 [clientcursormon]  mapped:160
-2016-04-29T17:26:39.957+0000 [clientcursormon]  connections:5
-2016-04-29T17:31:39.989+0000 [clientcursormon] mem (MB) res:76 virt:308
-2016-04-29T17:31:39.989+0000 [clientcursormon]  mapped:160
-2016-04-29T17:31:39.989+0000 [clientcursormon]  connections:5
-2016-04-29T17:36:40.009+0000 [clientcursormon] mem (MB) res:76 virt:308
-2016-04-29T17:36:40.009+0000 [clientcursormon]  mapped:160
-2016-04-29T17:36:40.009+0000 [clientcursormon]  connections:5
-2016-04-29T17:41:40.031+0000 [clientcursormon] mem (MB) res:76 virt:308
-2016-04-29T17:41:40.031+0000 [clientcursormon]  mapped:160
-2016-04-29T17:41:40.031+0000 [clientcursormon]  connections:5
-2016-04-29T17:46:40.052+0000 [clientcursormon] mem (MB) res:75 virt:308
-2016-04-29T17:46:40.052+0000 [clientcursormon]  mapped:160
-2016-04-29T17:46:40.052+0000 [clientcursormon]  connections:5
-2016-04-29T17:51:40.073+0000 [clientcursormon] mem (MB) res:75 virt:308
-2016-04-29T17:51:40.073+0000 [clientcursormon]  mapped:160
-2016-04-29T17:51:40.073+0000 [clientcursormon]  connections:5
-2016-04-29T17:56:40.093+0000 [clientcursormon] mem (MB) res:75 virt:308
-2016-04-29T17:56:40.093+0000 [clientcursormon]  mapped:160
-2016-04-29T17:56:40.093+0000 [clientcursormon]  connections:5
-2016-04-29T18:01:40.117+0000 [clientcursormon] mem (MB) res:75 virt:308
-2016-04-29T18:01:40.117+0000 [clientcursormon]  mapped:160
-2016-04-29T18:01:40.117+0000 [clientcursormon]  connections:5
-2016-04-29T18:06:40.141+0000 [clientcursormon] mem (MB) res:75 virt:308
-2016-04-29T18:06:40.141+0000 [clientcursormon]  mapped:160
-2016-04-29T18:06:40.141+0000 [clientcursormon]  connections:5
-2016-04-29T18:11:40.161+0000 [clientcursormon] mem (MB) res:75 virt:308
-2016-04-29T18:11:40.161+0000 [clientcursormon]  mapped:160
-2016-04-29T18:11:40.161+0000 [clientcursormon]  connections:5
-2016-04-29T18:16:40.180+0000 [clientcursormon] mem (MB) res:75 virt:308
-2016-04-29T18:16:40.180+0000 [clientcursormon]  mapped:160
-2016-04-29T18:16:40.180+0000 [clientcursormon]  connections:5
-2016-04-29T18:21:40.197+0000 [clientcursormon] mem (MB) res:74 virt:308
-2016-04-29T18:21:40.198+0000 [clientcursormon]  mapped:160
-2016-04-29T18:21:40.198+0000 [clientcursormon]  connections:5
-2016-04-29T18:26:40.215+0000 [clientcursormon] mem (MB) res:72 virt:308
-2016-04-29T18:26:40.215+0000 [clientcursormon]  mapped:160
-2016-04-29T18:26:40.215+0000 [clientcursormon]  connections:5
-2016-04-29T18:31:40.254+0000 [clientcursormon] mem (MB) res:72 virt:308
-2016-04-29T18:31:40.254+0000 [clientcursormon]  mapped:160
-2016-04-29T18:31:40.254+0000 [clientcursormon]  connections:5
-2016-04-29T18:36:40.290+0000 [clientcursormon] mem (MB) res:72 virt:308
-2016-04-29T18:36:40.291+0000 [clientcursormon]  mapped:160
-2016-04-29T18:36:40.291+0000 [clientcursormon]  connections:5
-2016-04-29T18:41:40.320+0000 [clientcursormon] mem (MB) res:72 virt:308
-2016-04-29T18:41:40.320+0000 [clientcursormon]  mapped:160
-2016-04-29T18:41:40.320+0000 [clientcursormon]  connections:5
-2016-04-29T18:46:40.341+0000 [clientcursormon] mem (MB) res:72 virt:308
-2016-04-29T18:46:40.341+0000 [clientcursormon]  mapped:160
-2016-04-29T18:46:40.341+0000 [clientcursormon]  connections:5
-2016-04-29T18:51:40.362+0000 [clientcursormon] mem (MB) res:67 virt:308
-2016-04-29T18:51:40.365+0000 [clientcursormon]  mapped:160
-2016-04-29T18:51:40.365+0000 [clientcursormon]  connections:5
-2016-04-29T18:56:40.385+0000 [clientcursormon] mem (MB) res:67 virt:308
-2016-04-29T18:56:40.386+0000 [clientcursormon]  mapped:160
-2016-04-29T18:56:40.386+0000 [clientcursormon]  connections:5
-2016-04-29T19:01:40.405+0000 [clientcursormon] mem (MB) res:67 virt:308
-2016-04-29T19:01:40.405+0000 [clientcursormon]  mapped:160
-2016-04-29T19:01:40.405+0000 [clientcursormon]  connections:5
-2016-04-29T19:06:40.425+0000 [clientcursormon] mem (MB) res:67 virt:308
-2016-04-29T19:06:40.425+0000 [clientcursormon]  mapped:160
-2016-04-29T19:06:40.425+0000 [clientcursormon]  connections:5
-2016-04-29T19:11:40.454+0000 [clientcursormon] mem (MB) res:67 virt:308
-2016-04-29T19:11:40.454+0000 [clientcursormon]  mapped:160
-2016-04-29T19:11:40.454+0000 [clientcursormon]  connections:5
-2016-04-29T19:16:40.476+0000 [clientcursormon] mem (MB) res:67 virt:308
-2016-04-29T19:16:40.477+0000 [clientcursormon]  mapped:160
-2016-04-29T19:16:40.477+0000 [clientcursormon]  connections:5
-2016-04-29T19:21:40.508+0000 [clientcursormon] mem (MB) res:67 virt:308
-2016-04-29T19:21:40.508+0000 [clientcursormon]  mapped:160
-2016-04-29T19:21:40.508+0000 [clientcursormon]  connections:5
-2016-04-29T19:26:40.526+0000 [clientcursormon] mem (MB) res:67 virt:308
-2016-04-29T19:26:40.526+0000 [clientcursormon]  mapped:160
-2016-04-29T19:26:40.526+0000 [clientcursormon]  connections:5
-2016-04-29T19:31:40.571+0000 [clientcursormon] mem (MB) res:67 virt:308
-2016-04-29T19:31:40.571+0000 [clientcursormon]  mapped:160
-2016-04-29T19:31:40.571+0000 [clientcursormon]  connections:5
-2016-04-29T19:36:40.604+0000 [clientcursormon] mem (MB) res:67 virt:308
-2016-04-29T19:36:40.604+0000 [clientcursormon]  mapped:160
-2016-04-29T19:36:40.604+0000 [clientcursormon]  connections:5
-2016-04-29T19:41:40.631+0000 [clientcursormon] mem (MB) res:67 virt:308
-2016-04-29T19:41:40.631+0000 [clientcursormon]  mapped:160
-2016-04-29T19:41:40.631+0000 [clientcursormon]  connections:5
-2016-04-29T19:46:40.653+0000 [clientcursormon] mem (MB) res:67 virt:308
-2016-04-29T19:46:40.654+0000 [clientcursormon]  mapped:160
-2016-04-29T19:46:40.654+0000 [clientcursormon]  connections:5
-2016-04-29T19:51:40.682+0000 [clientcursormon] mem (MB) res:65 virt:308
-2016-04-29T19:51:40.682+0000 [clientcursormon]  mapped:160
-2016-04-29T19:51:40.682+0000 [clientcursormon]  connections:5
-2016-04-29T19:56:40.775+0000 [clientcursormon] mem (MB) res:61 virt:308
-2016-04-29T19:56:40.775+0000 [clientcursormon]  mapped:160
-2016-04-29T19:56:40.775+0000 [clientcursormon]  connections:5
-2016-04-29T20:01:40.800+0000 [clientcursormon] mem (MB) res:61 virt:308
-2016-04-29T20:01:40.800+0000 [clientcursormon]  mapped:160
-2016-04-29T20:01:40.800+0000 [clientcursormon]  connections:5
-2016-04-29T20:06:40.821+0000 [clientcursormon] mem (MB) res:61 virt:308
-2016-04-29T20:06:40.821+0000 [clientcursormon]  mapped:160
-2016-04-29T20:06:40.821+0000 [clientcursormon]  connections:5
-2016-04-29T20:11:40.855+0000 [clientcursormon] mem (MB) res:59 virt:308
-2016-04-29T20:11:40.855+0000 [clientcursormon]  mapped:160
-2016-04-29T20:11:40.855+0000 [clientcursormon]  connections:5
-2016-04-29T20:16:40.886+0000 [clientcursormon] mem (MB) res:59 virt:308
-2016-04-29T20:16:40.886+0000 [clientcursormon]  mapped:160
-2016-04-29T20:16:40.886+0000 [clientcursormon]  connections:5
-2016-04-29T20:21:40.910+0000 [clientcursormon] mem (MB) res:59 virt:308
-2016-04-29T20:21:40.910+0000 [clientcursormon]  mapped:160
-2016-04-29T20:21:40.910+0000 [clientcursormon]  connections:5
-2016-04-29T20:26:40.969+0000 [clientcursormon] mem (MB) res:59 virt:308
-2016-04-29T20:26:40.969+0000 [clientcursormon]  mapped:160
-2016-04-29T20:26:40.969+0000 [clientcursormon]  connections:5
-2016-04-29T20:31:40.994+0000 [clientcursormon] mem (MB) res:59 virt:308
-2016-04-29T20:31:40.994+0000 [clientcursormon]  mapped:160
-2016-04-29T20:31:40.994+0000 [clientcursormon]  connections:5
-2016-04-29T20:36:41.032+0000 [clientcursormon] mem (MB) res:48 virt:308
-2016-04-29T20:36:41.032+0000 [clientcursormon]  mapped:160
-2016-04-29T20:36:41.032+0000 [clientcursormon]  connections:5
-2016-04-29T20:41:41.051+0000 [clientcursormon] mem (MB) res:47 virt:308
-2016-04-29T20:41:41.052+0000 [clientcursormon]  mapped:160
-2016-04-29T20:41:41.052+0000 [clientcursormon]  connections:5
-2016-04-29T20:46:41.082+0000 [clientcursormon] mem (MB) res:47 virt:308
-2016-04-29T20:46:41.082+0000 [clientcursormon]  mapped:160
-2016-04-29T20:46:41.082+0000 [clientcursormon]  connections:5
-2016-04-29T20:51:41.111+0000 [clientcursormon] mem (MB) res:47 virt:308
-2016-04-29T20:51:41.111+0000 [clientcursormon]  mapped:160
-2016-04-29T20:51:41.111+0000 [clientcursormon]  connections:5
-2016-04-29T20:56:41.131+0000 [clientcursormon] mem (MB) res:47 virt:308
-2016-04-29T20:56:41.131+0000 [clientcursormon]  mapped:160
-2016-04-29T20:56:41.131+0000 [clientcursormon]  connections:5
-2016-04-29T21:01:41.151+0000 [clientcursormon] mem (MB) res:47 virt:308
-2016-04-29T21:01:41.151+0000 [clientcursormon]  mapped:160
-2016-04-29T21:01:41.151+0000 [clientcursormon]  connections:5
+2016-05-06T09:31:29.782+0000 [initandlisten] MongoDB starting : pid=1482 port=27017 dbpath=/data/db 64-bit host=pn_paradise-proxy_wow-1717758
+2016-05-06T09:31:29.783+0000 [initandlisten] db version v2.6.9
+2016-05-06T09:31:29.783+0000 [initandlisten] git version: df313bc75aa94d192330cb92756fc486ea604e64
+2016-05-06T09:31:29.783+0000 [initandlisten] build info: Linux build20.nj1.10gen.cc 2.6.32-431.3.1.el6.x86_64 #1 SMP Fri Jan 3 21:39:27 UTC 2014 x86_64 BOOST_LIB_VERSION=1_49
+2016-05-06T09:31:29.783+0000 [initandlisten] allocator: tcmalloc
+2016-05-06T09:31:29.783+0000 [initandlisten] options: { repair: true }
+2016-05-06T09:31:29.799+0000 [initandlisten] repairDatabase local
+2016-05-06T09:31:29.800+0000 [initandlisten] allocating new ns file /data/db/_tmp_repairDatabase_0/local.ns, filling with zeroes...
+2016-05-06T09:31:29.905+0000 [FileAllocator] allocating new datafile /data/db/_tmp_repairDatabase_0/local.0, filling with zeroes...
+2016-05-06T09:31:29.906+0000 [FileAllocator] creating directory /data/db/_tmp_repairDatabase_0/_tmp
+2016-05-06T09:31:29.914+0000 [FileAllocator] done allocating datafile /data/db/_tmp_repairDatabase_0/local.0, size: 64MB,  took 0.004 secs
+2016-05-06T09:31:29.941+0000 [initandlisten] repairDatabase test
+2016-05-06T09:31:29.942+0000 [initandlisten] allocating new ns file /data/db/_tmp_repairDatabase_0/test.ns, filling with zeroes...
+2016-05-06T09:31:30.032+0000 [FileAllocator] allocating new datafile /data/db/_tmp_repairDatabase_0/test.0, filling with zeroes...
+2016-05-06T09:31:30.032+0000 [FileAllocator] creating directory /data/db/_tmp_repairDatabase_0/_tmp
+2016-05-06T09:31:30.043+0000 [FileAllocator] done allocating datafile /data/db/_tmp_repairDatabase_0/test.0, size: 64MB,  took 0.004 secs
+2016-05-06T09:31:30.074+0000 [initandlisten] finished checking dbs
+2016-05-06T09:31:30.075+0000 [initandlisten] dbexit: 
+2016-05-06T09:31:30.075+0000 [initandlisten] shutdown: going to close listening sockets...
+2016-05-06T09:31:30.075+0000 [initandlisten] shutdown: going to flush diaglog...
+2016-05-06T09:31:30.075+0000 [initandlisten] shutdown: going to close sockets...
+2016-05-06T09:31:30.075+0000 [initandlisten] shutdown: waiting for fs preallocator...
+2016-05-06T09:31:30.075+0000 [initandlisten] shutdown: closing all files...
+2016-05-06T09:31:30.075+0000 [initandlisten] closeAllFiles() finished
+2016-05-06T09:31:30.075+0000 [initandlisten] shutdown: removing fs lock...
+2016-05-06T09:31:30.075+0000 [initandlisten] dbexit: really exiting now

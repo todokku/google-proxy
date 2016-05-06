@@ -285,6 +285,11 @@ app.get('/pref', cache.route(), function(req, res){
 		});
 });
 
+app.get('/flushredis', function(req, res){
+	cache.del("*",function (error, removed) {
+		res.send("del:" + removed);
+	});
+});
 
 app.get('/redirect', function(req, res){
 	req.pipe(request(req.query.url)).pipe(res);

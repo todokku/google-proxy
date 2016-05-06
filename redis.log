@@ -1,11 +1,11 @@
-[2242] 06 May 04:52:55.421 # Warning: no config file specified, using the default config. In order to specify a config file use redis-server /path/to/redis.conf
+[1483] 06 May 09:31:29.481 # Warning: no config file specified, using the default config. In order to specify a config file use redis-server /path/to/redis.conf
                 _._                                                  
            _.-``__ ''-._                                             
       _.-``    `.  `_.  ''-._           Redis 2.8.4 (00000000/0) 64 bit
   .-`` .-```.  ```\/    _.,_ ''-._                                   
  (    '      ,       .-`  | `,    )     Running in stand alone mode
  |`-._`-...-` __...-.``-._|'` _.-'|     Port: 6379
- |    `-._   `._    /     _.-'    |     PID: 2242
+ |    `-._   `._    /     _.-'    |     PID: 1483
   `-._    `-._  `-./  _.-'    _.-'                                   
  |`-._`-._    `-.__.-'    _.-'_.-'|                                  
  |    `-._`-._        _.-'_.-'    |           http://redis.io        
@@ -17,7 +17,7 @@
           `-._        _.-'                                           
               `-.__.-'                                               
 
-[2242] 06 May 04:52:55.423 # Server started, Redis version 2.8.4
-[2242] 06 May 04:52:55.423 # WARNING overcommit_memory is set to 0! Background save may fail under low memory condition. To fix this issue add 'vm.overcommit_memory = 1' to /etc/sysctl.conf and then reboot or run the command 'sysctl vm.overcommit_memory=1' for this to take effect.
-[2242] 06 May 04:52:55.425 * DB loaded from disk: 0.002 seconds
-[2242] 06 May 04:52:55.425 * The server is now ready to accept connections on port 6379
+[1483] 06 May 09:31:29.482 # Server started, Redis version 2.8.4
+[1483] 06 May 09:31:29.482 # WARNING overcommit_memory is set to 0! Background save may fail under low memory condition. To fix this issue add 'vm.overcommit_memory = 1' to /etc/sysctl.conf and then reboot or run the command 'sysctl vm.overcommit_memory=1' for this to take effect.
+[1483] 06 May 09:31:29.483 * DB loaded from disk: 0.000 seconds
+[1483] 06 May 09:31:29.483 * The server is now ready to accept connections on port 6379
