@@ -11,10 +11,10 @@ block content
 					.flipper
 						.front
 							a(href=root)
-								img(src= (root === '/s' && '/img/wow_logo.png' || '/img/logo.png'))
+								img(src= (root === '/s' && '/img/wow_logo.png' || '/img/logo_large.png'))
 						.back 
 							a(href=reserve)
-								img(src=(root === '/s' && '/img/logo.png' || '/img/wow_logo.png'))
+								img(src=(root === '/s' && '/img/logo_large.png' || '/img/wow_logo.png'))
 				input#search-box.text-input(placeholder="tearme.top" name='q', value= keyword, type='text', tip='关键字', tip-msg='.info-tip', succ-msg='.info-succ', req='', autocomplete='off')
 				input.btn.submit-btn(type='submit', value='alphabet!')
 				i
