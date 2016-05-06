@@ -17,7 +17,8 @@ var extend = require('./lib/extend');
 var request = require("request");
 var cache = require('express-redis-cache')({
     host: '127.0.0.1',
-    port: 6379
+    port: 6379,
+    expire: 7 * 24 * 60 * 60
 });
 
 
@@ -133,7 +134,7 @@ app.get('/target', app.oauth.authorise(), function (req, res) {
 
 app.use(app.oauth.errorHandler());
 
-app.get('/', function(req, res, next){
+app.get('/', cache.route(),  function(req, res, next){
 	req.url = '/search';
 	next();
 });
@@ -182,7 +183,7 @@ app.route('/articles/:id').get(function(req, res){
 	  });
 	  
 
-app.get('/search',function(req, res, next){
+app.get('/search', cache.route(), function(req, res, next){
 	var render = {
 		root: '/search',
 		reserve: '/s'
@@ -216,8 +217,8 @@ app.get('/rss',cache.route({
 	});
 });
 
-//cache.route()
-app.get('/s', function(req,res){
+
+app.get('/s', cache.route(), function(req,res){
 	var render = {
 		root: '/s',
 		reserve: '/search'
@@ -263,8 +264,8 @@ app.get('/autosuggest', cache.route(), function(req, res){
 	}
 	
 	
-	wow(req, res).autoComplete(req.query.q).done(function(data){
-			res.send(data);
+	google(req, res).autoComplete(req.query.q).done(function(){
+			res.send(this.body);
 		}).fail(function(error){
 			res.send(error);
 		});

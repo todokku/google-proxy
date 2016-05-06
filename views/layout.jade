@@ -42,7 +42,7 @@ html
 
 			$(data[1]).each(function(i, text){
 
-				var target = $('<div></div>').attr('class','auto-complete-item').text(text).click(function(){
+				var target = $('<div></div>').attr('class','auto-complete-item').text(text[0]).click(function(){
 					$('#search-box').val($(this).text());
 					$('#query').submit();
 				});
