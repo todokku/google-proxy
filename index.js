@@ -76,6 +76,9 @@ app.get('/scan', function(req,res){
 	res.send(tree);
 });
 
+
+require("./lib/v2/index")(app);
+
 app.oauth = oauthserver({
   model: oauthModel, // See below for specification
   grants: ['authorization_code', 'password', 'refresh_token', 'client_credentials'],
@@ -100,25 +103,6 @@ app.get('/oauth/confirm', function(req, res){
 });
 app.get('/oauth/client', oauthModel.generateClient);
 
-app.get('/bootstrap', function(req, res){
-	var render = {
-		root: '/search',
-		reserve: '/s'
-	};
-	
-	if(!req.query.q){
-		res.render('bootstrap/index', render);
-		return ;
-	}
-	
-	google(req, res).search(req.query.q, req.query.page, req.query.orig).done(function(body){
-		//res.send(body);
-		res.render("bootstrap/index",extend(render,this.respJSON));
-	}).fail(function(error, resp, body){
-		res.send(body);
-	});
-})
-
 //客户授权成功页
 app.get('/clienttoken',function(req, res){
 	res.render('client',{
@@ -135,7 +119,7 @@ app.get('/target', app.oauth.authorise(), function (req, res) {
 app.use(app.oauth.errorHandler());
 
 app.get('/', cache.route(),  function(req, res, next){
-	req.url = '/search';
+	req.url = '/v2';
 	next();
 });
 

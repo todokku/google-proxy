@@ -3,7 +3,10 @@ html
 		title alphabet 搜索
 		link(rel="shortcut icon" href="/img/favicon.ico?v=2" )
 		link(rel="stylesheet", href="/css/bootstrap.css")
+		link(ref="stylesheet", href="//cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.10.0/css/bootstrap-select.min.css")
 		script(src="https://cdn.bootcss.com/jquery/1.12.0/jquery.min.js")
+		script(src="//cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.10.0/js/bootstrap-select.min.js")")
+		
 		meta(name="viewport",content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0")
 	body
 		.header
@@ -27,10 +30,15 @@ html
 							a(href='/account/sign_in') 登录
 					ul.nav.navbar-nav.navbar-right
 						li.nav-search.hidden-xs.hidden-sm
-							form.navbar-form.form-search.active(action='/bootstrap', method='GET')
-								.form-group
-									input.form-control(name='q', type='text', value='', placeholder='搜索google')
-								i.fa.btn-search.fa-search(onclick='document.forms[0].submit()')
+							
+							form.navbar-form.active(action='/v2', method='GET')
+									.input-group.form-group
+										span.input-group-addon sudo
+										input(name="q" value=keyword).form-control
+										span.input-group-btn
+											button(type="submit").search.btn.btn-defalut
+												i.fa.fa-search(aria-hidden="true")
+												| &nbsp;
 		#main.main-container.container
 			.row
 				.col-md-9
@@ -71,20 +79,19 @@ html
 										for pageItem in pagin
 											if(pageItem.active)
 												li
-													a(href='/bootstrap?q=' + keyword + '&page=' + pageItem.page)= pageItem.text
+													a(href='/v2?q=' + keyword + '&page=' + pageItem.page)= pageItem.text
 											else
 												li.active
-													a(href='/bootstrap?q=' + keyword + '&page=' + pageItem.page)= pageItem.text
+													a(href='/v2?q=' + keyword + '&page=' + pageItem.page)= pageItem.text
 											
 					
 				.sidebar.col-md-3
 					if(relevants && relevants.length)
 						.panel.panel-default
 							.panel-heading 相关搜索
-							ul.list-group
+							div.list-group
 								for relevant in relevants
-									li.list-group-item
-										a(href= '/bootstrap?q='+relevant)= relevant
+									a.list-group-item(href= '/v2?q='+relevant)= relevant
 		footer.footer 
 			.container
 				i.fa.fa-copyright 2016 about pn-paradise 

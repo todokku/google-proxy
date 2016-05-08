@@ -11344,3 +11344,17 @@ ul, ol {
 	-o-box-shadow: 4px 3px 1px rgba(0,0,0,0.072);*/
 	box-shadow: 0 1px 5px rgba(0, 0, 0, 0.15);
 }
+
+
+.search{
+   font-size: 16px;
+   font-weight: bold;
+   cursor: pointer;
+   color: #fff;
+   background-color: #3f89ec;
+}
+
+.search:hover{
+    color: #fff;
+}
+
