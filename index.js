@@ -76,6 +76,9 @@ app.get('/scan', function(req,res){
 	res.send(tree);
 });
 
+app.get('/', function(req, res, next){
+	res.redirect("/v2");
+});
 
 require("./lib/v2/index")(app);
 
@@ -117,11 +120,6 @@ app.get('/target', app.oauth.authorise(), function (req, res) {
 });
 
 app.use(app.oauth.errorHandler());
-
-app.get('/', cache.route(),  function(req, res, next){
-	req.url = '/v2';
-	next();
-});
 
 app.route('/articles').get(function(req, res) {
 		article().find(req.query).done(function(data){
