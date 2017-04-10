@@ -40,6 +40,15 @@ html
 												i.fa.fa-search(aria-hidden="true")
 												| &nbsp;
 		#main.main-container.container
+			if(!items)
+				.row
+					.col-md-12
+						.search-box
+						.search-icon
+						.search-logo
+						
+					
+				
 			.row
 				.col-md-9
 					if(items)
@@ -83,7 +92,8 @@ html
 											else
 												li.active
 													a(href='/v2?q=' + keyword + '&page=' + pageItem.page)= pageItem.text
-											
+					
+					
 					
 				.sidebar.col-md-3
 					if(relevants && relevants.length)

@@ -77,7 +77,7 @@ app.get('/scan', function(req,res){
 });
 
 app.get('/', function(req, res, next){
-	res.redirect("/v2");
+	res.redirect("/search");
 });
 
 require("./lib/v2/index")(app);
@@ -225,7 +225,9 @@ app.get('/s', cache.route(), function(req,res){
 });
 
 app.get('/index',  function(req,res){
-	res.render('amazeui/index');
+	var fs = require('fs');
+	var json = JSON.parse(fs.readFileSync('views/template/interface.json', 'utf8'));
+	res.render('template/post', json);
 });
 
 

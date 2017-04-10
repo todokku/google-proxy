@@ -11358,3 +11358,41 @@ ul, ol {
     color: #fff;
 }
 
+body{
+    background: url(//123p0.sogoucdn.com/u/dhqq/v2/img/bg_night_V2.jpg?t=300b734a1219439e10db3bd95b1fa036) center 0 repeat-x;
+}
+
+.search-box{
+    background: #fff;
+    opacity: .15;
+    filter: Alpha(opacity=15);
+    height: 96px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width:100%;
+    z-index: -1;
+}
+
+.search-icon{
+    width: 137px;
+    display: inline-block;
+    height: 75px;
+    margin: 0 4px 0 0;
+    font-size: 14px;
+    position: absolute;
+    background: url(//123p0.sogoucdn.com/u/dhqq/v2/img/search_whiteglow.png?t=f6b1203d1cb7e83532325957d26bf79d) 0 0 no-repeat;
+    opacity: 7.5;
+    left: 114px;
+    top: 26px;
+}
+
+.search-logo{
+    padding: 0;
+    cursor: pointer;
+    text-align: right;
+    width: 134px;
+    height: 32px;
+    left: 92px;
+    background: url(/img/logo.png) 0 0 no-repeat;
+}

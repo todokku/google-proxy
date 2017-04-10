@@ -1,7 +1,2 @@
 Cute files is running on port 8080
-connection error! { [MongoError: connect ECONNREFUSED] name: 'MongoError', message: 'connect ECONNREFUSED' }
-Warning: missing space before text for line 26 of jade file "/home/ubuntu/workspace/views/home.jade"
-Warning: missing space before text for line 33 of jade file "/home/ubuntu/workspace/views/home.jade"
-Warning: missing space before text for line 35 of jade file "/home/ubuntu/workspace/views/home.jade"
-Warning: missing space before text for line 93 of jade file "/home/ubuntu/workspace/views/home.jade"
-Warning: missing space before text for line 95 of jade file "/home/ubuntu/workspace/views/home.jade"
+start!
