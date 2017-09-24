@@ -173,3 +173,45 @@ nohup: ignoring input
 2017-09-24T04:55:59.995+0000 [clientcursormon] mem (MB) res:27 virt:308
 2017-09-24T04:55:59.996+0000 [clientcursormon]  mapped:160
 2017-09-24T04:55:59.996+0000 [clientcursormon]  connections:5
+2017-09-24T05:01:00.014+0000 [clientcursormon] mem (MB) res:27 virt:308
+2017-09-24T05:01:00.014+0000 [clientcursormon]  mapped:160
+2017-09-24T05:01:00.014+0000 [clientcursormon]  connections:5
+2017-09-24T05:06:00.034+0000 [clientcursormon] mem (MB) res:26 virt:308
+2017-09-24T05:06:00.034+0000 [clientcursormon]  mapped:160
+2017-09-24T05:06:00.034+0000 [clientcursormon]  connections:5
+2017-09-24T05:11:00.050+0000 [clientcursormon] mem (MB) res:26 virt:308
+2017-09-24T05:11:00.050+0000 [clientcursormon]  mapped:160
+2017-09-24T05:11:00.050+0000 [clientcursormon]  connections:5
+2017-09-24T05:16:00.104+0000 [clientcursormon] mem (MB) res:26 virt:308
+2017-09-24T05:16:00.104+0000 [clientcursormon]  mapped:160
+2017-09-24T05:16:00.104+0000 [clientcursormon]  connections:5
+2017-09-24T05:21:00.121+0000 [clientcursormon] mem (MB) res:25 virt:308
+2017-09-24T05:21:00.122+0000 [clientcursormon]  mapped:160
+2017-09-24T05:21:00.122+0000 [clientcursormon]  connections:5
+2017-09-24T05:26:00.136+0000 [clientcursormon] mem (MB) res:25 virt:308
+2017-09-24T05:26:00.136+0000 [clientcursormon]  mapped:160
+2017-09-24T05:26:00.136+0000 [clientcursormon]  connections:5
+2017-09-24T05:31:00.153+0000 [clientcursormon] mem (MB) res:25 virt:308
+2017-09-24T05:31:00.153+0000 [clientcursormon]  mapped:160
+2017-09-24T05:31:00.153+0000 [clientcursormon]  connections:5
+2017-09-24T05:36:00.168+0000 [clientcursormon] mem (MB) res:25 virt:308
+2017-09-24T05:36:00.168+0000 [clientcursormon]  mapped:160
+2017-09-24T05:36:00.168+0000 [clientcursormon]  connections:5
+2017-09-24T05:41:00.182+0000 [clientcursormon] mem (MB) res:25 virt:308
+2017-09-24T05:41:00.182+0000 [clientcursormon]  mapped:160
+2017-09-24T05:41:00.182+0000 [clientcursormon]  connections:5
+2017-09-24T05:46:00.197+0000 [clientcursormon] mem (MB) res:25 virt:308
+2017-09-24T05:46:00.197+0000 [clientcursormon]  mapped:160
+2017-09-24T05:46:00.197+0000 [clientcursormon]  connections:5
+2017-09-24T05:51:00.213+0000 [clientcursormon] mem (MB) res:25 virt:308
+2017-09-24T05:51:00.213+0000 [clientcursormon]  mapped:160
+2017-09-24T05:51:00.213+0000 [clientcursormon]  connections:5
+2017-09-24T05:56:00.229+0000 [clientcursormon] mem (MB) res:25 virt:308
+2017-09-24T05:56:00.229+0000 [clientcursormon]  mapped:160
+2017-09-24T05:56:00.229+0000 [clientcursormon]  connections:5
+2017-09-24T06:01:00.243+0000 [clientcursormon] mem (MB) res:25 virt:308
+2017-09-24T06:01:00.243+0000 [clientcursormon]  mapped:160
+2017-09-24T06:01:00.243+0000 [clientcursormon]  connections:5
+2017-09-24T06:06:00.258+0000 [clientcursormon] mem (MB) res:25 virt:308
+2017-09-24T06:06:00.258+0000 [clientcursormon]  mapped:160
+2017-09-24T06:06:00.258+0000 [clientcursormon]  connections:5
