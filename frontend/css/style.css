@@ -471,7 +471,7 @@ a:hover{
 
 .auto-complete-box {
 	position: fixed;
-	left: 213px;
+	left: 291px;
 	top: 61px;
 	z-index: 999;
 	color: #777;
@@ -708,6 +708,7 @@ ul.bucket li:hover .bucket-item{
 	  -moz-transform: perspective(1000px);
 	  -moz-transform-style: preserve-3d;
 	  -ms-transform-style: preserve-3d;
+	  width:160px;
 }
 	
 	.flip-container:hover{
@@ -719,7 +720,7 @@ ul.bucket li:hover .bucket-item{
 	}
 
 .front, .back , .front img, .back img{
-	width: 84px;
+	width: 160px;
 	height: 42px;
 }
 

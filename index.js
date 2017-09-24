@@ -164,8 +164,8 @@ app.route('/articles/:id').get(function(req, res){
 		});
 	  });
 	  
-
-app.get('/search', cache.route(), function(req, res, next){
+// cache.route(), 
+app.get('/search',function(req, res, next){
 	var render = {
 		root: '/search',
 		reserve: '/s'
