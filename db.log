@@ -215,3 +215,9 @@ nohup: ignoring input
 2017-09-24T06:06:00.258+0000 [clientcursormon] mem (MB) res:25 virt:308
 2017-09-24T06:06:00.258+0000 [clientcursormon]  mapped:160
 2017-09-24T06:06:00.258+0000 [clientcursormon]  connections:5
+2017-09-24T06:11:00.272+0000 [clientcursormon] mem (MB) res:25 virt:308
+2017-09-24T06:11:00.272+0000 [clientcursormon]  mapped:160
+2017-09-24T06:11:00.272+0000 [clientcursormon]  connections:5
+2017-09-24T06:16:00.289+0000 [clientcursormon] mem (MB) res:25 virt:308
+2017-09-24T06:16:00.289+0000 [clientcursormon]  mapped:160
+2017-09-24T06:16:00.289+0000 [clientcursormon]  connections:5
