@@ -13,7 +13,6 @@ var wow = require('./lib/wow');
 var google = require('./lib/google');
 var rss = require('./lib/rss');
 var extend = require('./lib/extend');
-//var article = require("./lib/article");
 var request = require("request");
 var cache = require('express-redis-cache')({
     host: '127.0.0.1',
@@ -70,6 +69,8 @@ app.use('/files', express.static(process.cwd(), {
 	}
 }));
 
+app.locals.moment = require('moment');
+
 // This endpoint is requested by our frontend JS
 
 app.get('/scan', function(req,res){
@@ -121,51 +122,7 @@ app.get('/target', app.oauth.authorise(), function (req, res) {
 
 app.use(app.oauth.errorHandler());
 
-app.route('/articles').get(function(req, res) {
-		article().find(req.query).done(function(data){
-			res.json(data);
-		}).fail(function(err){
-			res.json(err);
-		});
-	  })
-	  .post(function(req, res) {
-	  	var currTime = new Date();
-		article().save(extend(req.body, {modifyTime: currTime, createTime: currTime})).done(function(data){
-			res.json(data);
-		}).fail(function(err){
-			res.json(err);
-		});
-	  });
-	  
-app.route('/articles/:id').get(function(req, res){
-		article().findById(req.params.id).done(function(data){
-			if(!data){
-				res.status(404);
-			}
-			res.json(data);
-			
-		}).fail(function(err){
-			res.status(500).json(err);
-		});
-	  })
-	  .put(function(req, res){
-		var currTime = new Date();
-		article().save(extend(req.body, {_id: req.params.id, modifyTime: currTime})).done(function(data){
-			res.json(data);
-		}).fail(function(err){
-			res.json(err);
-		});
-	  })
-	  .delete(function(req, res){
-	  	article().remove(req.params.id).done(function(data){
-			res.json(data);
-		}).fail(function(err){
-			res.json(err);
-		});
-	  });
-	  
-// cache.route(), 
-app.get('/search',function(req, res, next){
+app.get('/search', cache.route(), function(req, res, next){
 	var render = {
 		root: '/search',
 		reserve: '/s'
@@ -184,6 +141,7 @@ app.get('/search',function(req, res, next){
 	});
 });
 
+/**/
 app.get('/rss',cache.route({
 	expire : 60 * 60 * 6
 }), function(req, res){
@@ -197,31 +155,6 @@ app.get('/rss',cache.route({
 	}, function(err, resp, body){
 		res.status(400).send(body);
 	});
-});
-
-
-app.get('/s', cache.route(), function(req,res){
-	var render = {
-		root: '/s',
-		reserve: '/search'
-	};
-	
-	if(!req.query.q){
-		res.render('home', render);
-		return ;
-	}
-	
-	if(req.query.q.length > 64){
-		req.query.q = req.query.q.substring(0, 64);
-	}
-	
-	wow(req,res).search(req.query.q, req.query.page, req.query.orig).done(function(body){
-			res.render('home', extend(render,this.respJSON));
-		}).fail(function(error){
-			res.send(error);
-		});
-	
-	
 });
 
 app.get('/index',  function(req,res){

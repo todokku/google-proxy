@@ -221,3 +221,275 @@ nohup: ignoring input
 2017-09-24T06:16:00.289+0000 [clientcursormon] mem (MB) res:25 virt:308
 2017-09-24T06:16:00.289+0000 [clientcursormon]  mapped:160
 2017-09-24T06:16:00.289+0000 [clientcursormon]  connections:5
+2017-09-24T06:21:00.302+0000 [clientcursormon] mem (MB) res:25 virt:308
+2017-09-24T06:21:00.302+0000 [clientcursormon]  mapped:160
+2017-09-24T06:21:00.302+0000 [clientcursormon]  connections:5
+2017-09-24T06:26:00.318+0000 [clientcursormon] mem (MB) res:25 virt:308
+2017-09-24T06:26:00.318+0000 [clientcursormon]  mapped:160
+2017-09-24T06:26:00.318+0000 [clientcursormon]  connections:5
+2017-09-24T06:31:00.336+0000 [clientcursormon] mem (MB) res:25 virt:308
+2017-09-24T06:31:00.337+0000 [clientcursormon]  mapped:160
+2017-09-24T06:31:00.337+0000 [clientcursormon]  connections:5
+2017-09-24T06:36:00.365+0000 [clientcursormon] mem (MB) res:25 virt:308
+2017-09-24T06:36:00.365+0000 [clientcursormon]  mapped:160
+2017-09-24T06:36:00.365+0000 [clientcursormon]  connections:5
+2017-09-24T06:41:00.382+0000 [clientcursormon] mem (MB) res:25 virt:308
+2017-09-24T06:41:00.382+0000 [clientcursormon]  mapped:160
+2017-09-24T06:41:00.382+0000 [clientcursormon]  connections:5
+2017-09-24T06:46:00.404+0000 [clientcursormon] mem (MB) res:25 virt:308
+2017-09-24T06:46:00.404+0000 [clientcursormon]  mapped:160
+2017-09-24T06:46:00.404+0000 [clientcursormon]  connections:5
+2017-09-24T06:51:00.436+0000 [clientcursormon] mem (MB) res:25 virt:308
+2017-09-24T06:51:00.436+0000 [clientcursormon]  mapped:160
+2017-09-24T06:51:00.436+0000 [clientcursormon]  connections:5
+2017-09-24T06:56:00.470+0000 [clientcursormon] mem (MB) res:26 virt:308
+2017-09-24T06:56:00.470+0000 [clientcursormon]  mapped:160
+2017-09-24T06:56:00.470+0000 [clientcursormon]  connections:5
+2017-09-24T07:01:00.484+0000 [clientcursormon] mem (MB) res:26 virt:308
+2017-09-24T07:01:00.484+0000 [clientcursormon]  mapped:160
+2017-09-24T07:01:00.484+0000 [clientcursormon]  connections:5
+2017-09-24T07:06:00.500+0000 [clientcursormon] mem (MB) res:26 virt:308
+2017-09-24T07:06:00.501+0000 [clientcursormon]  mapped:160
+2017-09-24T07:06:00.501+0000 [clientcursormon]  connections:5
+2017-09-24T07:11:00.515+0000 [clientcursormon] mem (MB) res:26 virt:308
+2017-09-24T07:11:00.515+0000 [clientcursormon]  mapped:160
+2017-09-24T07:11:00.515+0000 [clientcursormon]  connections:5
+2017-09-24T07:16:00.529+0000 [clientcursormon] mem (MB) res:26 virt:308
+2017-09-24T07:16:00.529+0000 [clientcursormon]  mapped:160
+2017-09-24T07:16:00.529+0000 [clientcursormon]  connections:5
+2017-09-24T07:21:00.543+0000 [clientcursormon] mem (MB) res:26 virt:308
+2017-09-24T07:21:00.543+0000 [clientcursormon]  mapped:160
+2017-09-24T07:21:00.543+0000 [clientcursormon]  connections:5
+2017-09-24T07:26:00.561+0000 [clientcursormon] mem (MB) res:26 virt:308
+2017-09-24T07:26:00.561+0000 [clientcursormon]  mapped:160
+2017-09-24T07:26:00.561+0000 [clientcursormon]  connections:5
+2017-09-24T07:31:00.576+0000 [clientcursormon] mem (MB) res:26 virt:308
+2017-09-24T07:31:00.576+0000 [clientcursormon]  mapped:160
+2017-09-24T07:31:00.576+0000 [clientcursormon]  connections:5
+2017-09-24T07:36:00.590+0000 [clientcursormon] mem (MB) res:26 virt:308
+2017-09-24T07:36:00.590+0000 [clientcursormon]  mapped:160
+2017-09-24T07:36:00.590+0000 [clientcursormon]  connections:5
+2017-09-24T07:41:00.605+0000 [clientcursormon] mem (MB) res:26 virt:308
+2017-09-24T07:41:00.605+0000 [clientcursormon]  mapped:160
+2017-09-24T07:41:00.605+0000 [clientcursormon]  connections:5
+2017-09-24T07:46:00.621+0000 [clientcursormon] mem (MB) res:26 virt:308
+2017-09-24T07:46:00.621+0000 [clientcursormon]  mapped:160
+2017-09-24T07:46:00.621+0000 [clientcursormon]  connections:5
+2017-09-24T07:51:00.637+0000 [clientcursormon] mem (MB) res:26 virt:308
+2017-09-24T07:51:00.637+0000 [clientcursormon]  mapped:160
+2017-09-24T07:51:00.637+0000 [clientcursormon]  connections:5
+2017-09-24T07:56:00.661+0000 [clientcursormon] mem (MB) res:26 virt:308
+2017-09-24T07:56:00.661+0000 [clientcursormon]  mapped:160
+2017-09-24T07:56:00.661+0000 [clientcursormon]  connections:5
+2017-09-24T08:01:00.676+0000 [clientcursormon] mem (MB) res:26 virt:308
+2017-09-24T08:01:00.676+0000 [clientcursormon]  mapped:160
+2017-09-24T08:01:00.676+0000 [clientcursormon]  connections:5
+2017-09-24T08:06:00.690+0000 [clientcursormon] mem (MB) res:26 virt:308
+2017-09-24T08:06:00.690+0000 [clientcursormon]  mapped:160
+2017-09-24T08:06:00.690+0000 [clientcursormon]  connections:5
+2017-09-24T08:11:00.706+0000 [clientcursormon] mem (MB) res:26 virt:308
+2017-09-24T08:11:00.706+0000 [clientcursormon]  mapped:160
+2017-09-24T08:11:00.706+0000 [clientcursormon]  connections:5
+2017-09-24T08:16:00.743+0000 [clientcursormon] mem (MB) res:26 virt:308
+2017-09-24T08:16:00.743+0000 [clientcursormon]  mapped:160
+2017-09-24T08:16:00.743+0000 [clientcursormon]  connections:5
+2017-09-24T08:21:00.757+0000 [clientcursormon] mem (MB) res:26 virt:308
+2017-09-24T08:21:00.757+0000 [clientcursormon]  mapped:160
+2017-09-24T08:21:00.757+0000 [clientcursormon]  connections:5
+2017-09-24T08:26:00.777+0000 [clientcursormon] mem (MB) res:26 virt:308
+2017-09-24T08:26:00.777+0000 [clientcursormon]  mapped:160
+2017-09-24T08:26:00.777+0000 [clientcursormon]  connections:5
+2017-09-24T08:31:00.791+0000 [clientcursormon] mem (MB) res:26 virt:308
+2017-09-24T08:31:00.791+0000 [clientcursormon]  mapped:160
+2017-09-24T08:31:00.791+0000 [clientcursormon]  connections:5
+2017-09-24T08:36:00.808+0000 [clientcursormon] mem (MB) res:26 virt:308
+2017-09-24T08:36:00.809+0000 [clientcursormon]  mapped:160
+2017-09-24T08:36:00.809+0000 [clientcursormon]  connections:5
+2017-09-24T08:41:00.825+0000 [clientcursormon] mem (MB) res:26 virt:308
+2017-09-24T08:41:00.825+0000 [clientcursormon]  mapped:160
+2017-09-24T08:41:00.825+0000 [clientcursormon]  connections:5
+2017-09-24T08:46:00.839+0000 [clientcursormon] mem (MB) res:26 virt:308
+2017-09-24T08:46:00.839+0000 [clientcursormon]  mapped:160
+2017-09-24T08:46:00.839+0000 [clientcursormon]  connections:5
+2017-09-24T08:51:00.853+0000 [clientcursormon] mem (MB) res:26 virt:308
+2017-09-24T08:51:00.853+0000 [clientcursormon]  mapped:160
+2017-09-24T08:51:00.853+0000 [clientcursormon]  connections:5
+2017-09-24T08:56:00.874+0000 [clientcursormon] mem (MB) res:26 virt:308
+2017-09-24T08:56:00.874+0000 [clientcursormon]  mapped:160
+2017-09-24T08:56:00.874+0000 [clientcursormon]  connections:5
+2017-09-24T09:00:55.879+0000 [conn50] end connection 127.0.0.1:54576 (4 connections now open)
+2017-09-24T09:00:55.879+0000 [conn46] end connection 127.0.0.1:54568 (4 connections now open)
+2017-09-24T09:00:55.879+0000 [conn48] end connection 127.0.0.1:54572 (4 connections now open)
+2017-09-24T09:00:55.879+0000 [conn47] end connection 127.0.0.1:54570 (4 connections now open)
+2017-09-24T09:00:55.879+0000 [conn49] end connection 127.0.0.1:54574 (4 connections now open)
+2017-09-24T09:00:58.782+0000 [initandlisten] connection accepted from 127.0.0.1:35754 #51 (1 connection now open)
+2017-09-24T09:00:58.783+0000 [initandlisten] connection accepted from 127.0.0.1:35756 #52 (2 connections now open)
+2017-09-24T09:00:58.783+0000 [initandlisten] connection accepted from 127.0.0.1:35758 #53 (3 connections now open)
+2017-09-24T09:00:58.783+0000 [initandlisten] connection accepted from 127.0.0.1:35760 #54 (4 connections now open)
+2017-09-24T09:00:58.784+0000 [initandlisten] connection accepted from 127.0.0.1:35762 #55 (5 connections now open)
+2017-09-24T09:01:00.888+0000 [clientcursormon] mem (MB) res:28 virt:308
+2017-09-24T09:01:00.888+0000 [clientcursormon]  mapped:160
+2017-09-24T09:01:00.888+0000 [clientcursormon]  connections:5
+2017-09-24T09:05:08.735+0000 [conn54] end connection 127.0.0.1:35760 (4 connections now open)
+2017-09-24T09:05:08.735+0000 [conn52] end connection 127.0.0.1:35756 (4 connections now open)
+2017-09-24T09:05:08.735+0000 [conn55] end connection 127.0.0.1:35762 (4 connections now open)
+2017-09-24T09:05:08.735+0000 [conn53] end connection 127.0.0.1:35758 (4 connections now open)
+2017-09-24T09:05:08.736+0000 [conn51] end connection 127.0.0.1:35754 (0 connections now open)
+2017-09-24T09:05:10.830+0000 [initandlisten] connection accepted from 127.0.0.1:39888 #56 (1 connection now open)
+2017-09-24T09:05:10.830+0000 [initandlisten] connection accepted from 127.0.0.1:39890 #57 (2 connections now open)
+2017-09-24T09:05:10.831+0000 [initandlisten] connection accepted from 127.0.0.1:39892 #58 (3 connections now open)
+2017-09-24T09:05:10.831+0000 [initandlisten] connection accepted from 127.0.0.1:39894 #59 (4 connections now open)
+2017-09-24T09:05:10.831+0000 [initandlisten] connection accepted from 127.0.0.1:39896 #60 (5 connections now open)
+2017-09-24T09:06:00.905+0000 [clientcursormon] mem (MB) res:28 virt:308
+2017-09-24T09:06:00.905+0000 [clientcursormon]  mapped:160
+2017-09-24T09:06:00.905+0000 [clientcursormon]  connections:5
+2017-09-24T09:06:13.131+0000 [conn59] end connection 127.0.0.1:39894 (4 connections now open)
+2017-09-24T09:06:13.131+0000 [conn56] end connection 127.0.0.1:39888 (4 connections now open)
+2017-09-24T09:06:13.131+0000 [conn58] end connection 127.0.0.1:39892 (4 connections now open)
+2017-09-24T09:06:13.136+0000 [conn57] end connection 127.0.0.1:39890 (2 connections now open)
+2017-09-24T09:06:13.136+0000 [conn60] end connection 127.0.0.1:39896 (2 connections now open)
+2017-09-24T09:06:15.284+0000 [initandlisten] connection accepted from 127.0.0.1:41080 #61 (1 connection now open)
+2017-09-24T09:06:15.284+0000 [initandlisten] connection accepted from 127.0.0.1:41082 #62 (2 connections now open)
+2017-09-24T09:06:15.285+0000 [initandlisten] connection accepted from 127.0.0.1:41084 #63 (3 connections now open)
+2017-09-24T09:06:15.285+0000 [initandlisten] connection accepted from 127.0.0.1:41086 #64 (4 connections now open)
+2017-09-24T09:06:15.285+0000 [initandlisten] connection accepted from 127.0.0.1:41088 #65 (5 connections now open)
+2017-09-24T09:06:55.194+0000 [conn65] end connection 127.0.0.1:41088 (4 connections now open)
+2017-09-24T09:06:55.194+0000 [conn61] end connection 127.0.0.1:41080 (4 connections now open)
+2017-09-24T09:06:55.194+0000 [conn62] end connection 127.0.0.1:41082 (4 connections now open)
+2017-09-24T09:06:55.194+0000 [conn63] end connection 127.0.0.1:41084 (4 connections now open)
+2017-09-24T09:06:55.194+0000 [conn64] end connection 127.0.0.1:41086 (0 connections now open)
+2017-09-24T09:06:57.404+0000 [initandlisten] connection accepted from 127.0.0.1:41832 #66 (1 connection now open)
+2017-09-24T09:06:57.404+0000 [initandlisten] connection accepted from 127.0.0.1:41834 #67 (2 connections now open)
+2017-09-24T09:06:57.405+0000 [initandlisten] connection accepted from 127.0.0.1:41836 #68 (3 connections now open)
+2017-09-24T09:06:57.405+0000 [initandlisten] connection accepted from 127.0.0.1:41838 #69 (4 connections now open)
+2017-09-24T09:06:57.405+0000 [initandlisten] connection accepted from 127.0.0.1:41842 #70 (5 connections now open)
+2017-09-24T09:11:00.952+0000 [clientcursormon] mem (MB) res:28 virt:308
+2017-09-24T09:11:00.952+0000 [clientcursormon]  mapped:160
+2017-09-24T09:11:00.953+0000 [clientcursormon]  connections:5
+2017-09-24T09:14:23.794+0000 [conn70] end connection 127.0.0.1:41842 (4 connections now open)
+2017-09-24T09:14:23.794+0000 [conn68] end connection 127.0.0.1:41836 (4 connections now open)
+2017-09-24T09:14:23.794+0000 [conn66] end connection 127.0.0.1:41832 (4 connections now open)
+2017-09-24T09:14:23.794+0000 [conn69] end connection 127.0.0.1:41838 (4 connections now open)
+2017-09-24T09:14:23.794+0000 [conn67] end connection 127.0.0.1:41834 (1 connection now open)
+2017-09-24T09:14:26.638+0000 [initandlisten] connection accepted from 127.0.0.1:48848 #71 (1 connection now open)
+2017-09-24T09:14:26.639+0000 [initandlisten] connection accepted from 127.0.0.1:48850 #72 (2 connections now open)
+2017-09-24T09:14:26.639+0000 [initandlisten] connection accepted from 127.0.0.1:48852 #73 (3 connections now open)
+2017-09-24T09:14:26.640+0000 [initandlisten] connection accepted from 127.0.0.1:48854 #74 (4 connections now open)
+2017-09-24T09:14:26.640+0000 [initandlisten] connection accepted from 127.0.0.1:48856 #75 (5 connections now open)
+2017-09-24T09:14:47.984+0000 [conn74] end connection 127.0.0.1:48854 (4 connections now open)
+2017-09-24T09:14:47.984+0000 [conn73] end connection 127.0.0.1:48852 (4 connections now open)
+2017-09-24T09:14:47.984+0000 [conn72] end connection 127.0.0.1:48850 (4 connections now open)
+2017-09-24T09:14:47.984+0000 [conn71] end connection 127.0.0.1:48848 (3 connections now open)
+2017-09-24T09:14:47.984+0000 [conn75] end connection 127.0.0.1:48856 (2 connections now open)
+2017-09-24T09:14:49.947+0000 [initandlisten] connection accepted from 127.0.0.1:49272 #76 (1 connection now open)
+2017-09-24T09:14:49.948+0000 [initandlisten] connection accepted from 127.0.0.1:49274 #77 (2 connections now open)
+2017-09-24T09:14:49.948+0000 [initandlisten] connection accepted from 127.0.0.1:49276 #78 (3 connections now open)
+2017-09-24T09:14:49.948+0000 [initandlisten] connection accepted from 127.0.0.1:49278 #79 (4 connections now open)
+2017-09-24T09:14:49.948+0000 [initandlisten] connection accepted from 127.0.0.1:49280 #80 (5 connections now open)
+2017-09-24T09:16:00.966+0000 [clientcursormon] mem (MB) res:28 virt:308
+2017-09-24T09:16:00.966+0000 [clientcursormon]  mapped:160
+2017-09-24T09:16:00.966+0000 [clientcursormon]  connections:5
+2017-09-24T09:20:39.399+0000 [conn76] end connection 127.0.0.1:49272 (4 connections now open)
+2017-09-24T09:20:39.399+0000 [conn79] end connection 127.0.0.1:49278 (4 connections now open)
+2017-09-24T09:20:39.399+0000 [conn78] end connection 127.0.0.1:49276 (4 connections now open)
+2017-09-24T09:20:39.399+0000 [conn80] end connection 127.0.0.1:49280 (4 connections now open)
+2017-09-24T09:20:39.399+0000 [conn77] end connection 127.0.0.1:49274 (4 connections now open)
+2017-09-24T09:20:42.059+0000 [initandlisten] connection accepted from 127.0.0.1:54614 #81 (1 connection now open)
+2017-09-24T09:20:42.059+0000 [initandlisten] connection accepted from 127.0.0.1:54616 #82 (2 connections now open)
+2017-09-24T09:20:42.059+0000 [initandlisten] connection accepted from 127.0.0.1:54618 #83 (3 connections now open)
+2017-09-24T09:20:42.060+0000 [initandlisten] connection accepted from 127.0.0.1:54620 #84 (4 connections now open)
+2017-09-24T09:20:42.060+0000 [initandlisten] connection accepted from 127.0.0.1:54622 #85 (5 connections now open)
+2017-09-24T09:21:00.988+0000 [clientcursormon] mem (MB) res:28 virt:308
+2017-09-24T09:21:00.988+0000 [clientcursormon]  mapped:160
+2017-09-24T09:21:00.988+0000 [clientcursormon]  connections:5
+2017-09-24T09:21:02.851+0000 [conn85] end connection 127.0.0.1:54622 (4 connections now open)
+2017-09-24T09:21:02.851+0000 [conn84] end connection 127.0.0.1:54620 (4 connections now open)
+2017-09-24T09:21:02.851+0000 [conn82] end connection 127.0.0.1:54616 (4 connections now open)
+2017-09-24T09:21:02.851+0000 [conn81] end connection 127.0.0.1:54614 (4 connections now open)
+2017-09-24T09:21:02.851+0000 [conn83] end connection 127.0.0.1:54618 (4 connections now open)
+2017-09-24T09:21:05.547+0000 [initandlisten] connection accepted from 127.0.0.1:55062 #86 (1 connection now open)
+2017-09-24T09:21:05.547+0000 [initandlisten] connection accepted from 127.0.0.1:55064 #87 (2 connections now open)
+2017-09-24T09:21:05.548+0000 [initandlisten] connection accepted from 127.0.0.1:55066 #88 (3 connections now open)
+2017-09-24T09:21:05.548+0000 [initandlisten] connection accepted from 127.0.0.1:55068 #89 (4 connections now open)
+2017-09-24T09:21:05.548+0000 [initandlisten] connection accepted from 127.0.0.1:55070 #90 (5 connections now open)
+2017-09-24T09:23:32.414+0000 [conn90] end connection 127.0.0.1:55070 (4 connections now open)
+2017-09-24T09:23:32.414+0000 [conn89] end connection 127.0.0.1:55068 (4 connections now open)
+2017-09-24T09:23:32.414+0000 [conn87] end connection 127.0.0.1:55064 (2 connections now open)
+2017-09-24T09:23:32.415+0000 [conn86] end connection 127.0.0.1:55062 (1 connection now open)
+2017-09-24T09:23:32.414+0000 [conn88] end connection 127.0.0.1:55066 (4 connections now open)
+2017-09-24T09:23:35.287+0000 [initandlisten] connection accepted from 127.0.0.1:57544 #91 (1 connection now open)
+2017-09-24T09:23:35.288+0000 [initandlisten] connection accepted from 127.0.0.1:57546 #92 (2 connections now open)
+2017-09-24T09:23:35.288+0000 [initandlisten] connection accepted from 127.0.0.1:57548 #93 (3 connections now open)
+2017-09-24T09:23:35.288+0000 [initandlisten] connection accepted from 127.0.0.1:57550 #94 (4 connections now open)
+2017-09-24T09:23:35.288+0000 [initandlisten] connection accepted from 127.0.0.1:57552 #95 (5 connections now open)
+2017-09-24T09:26:01.003+0000 [clientcursormon] mem (MB) res:28 virt:308
+2017-09-24T09:26:01.003+0000 [clientcursormon]  mapped:160
+2017-09-24T09:26:01.003+0000 [clientcursormon]  connections:5
+2017-09-24T09:29:42.611+0000 [conn95] end connection 127.0.0.1:57552 (4 connections now open)
+2017-09-24T09:29:42.611+0000 [conn92] end connection 127.0.0.1:57546 (4 connections now open)
+2017-09-24T09:29:42.611+0000 [conn91] end connection 127.0.0.1:57544 (4 connections now open)
+2017-09-24T09:29:42.611+0000 [conn93] end connection 127.0.0.1:57548 (4 connections now open)
+2017-09-24T09:29:42.611+0000 [conn94] end connection 127.0.0.1:57550 (4 connections now open)
+2017-09-24T09:29:45.321+0000 [initandlisten] connection accepted from 127.0.0.1:35288 #96 (1 connection now open)
+2017-09-24T09:29:45.322+0000 [initandlisten] connection accepted from 127.0.0.1:35290 #97 (2 connections now open)
+2017-09-24T09:29:45.322+0000 [initandlisten] connection accepted from 127.0.0.1:35292 #98 (3 connections now open)
+2017-09-24T09:29:45.322+0000 [initandlisten] connection accepted from 127.0.0.1:35294 #99 (4 connections now open)
+2017-09-24T09:29:45.322+0000 [initandlisten] connection accepted from 127.0.0.1:35296 #100 (5 connections now open)
+2017-09-24T09:31:01.020+0000 [clientcursormon] mem (MB) res:28 virt:308
+2017-09-24T09:31:01.020+0000 [clientcursormon]  mapped:160
+2017-09-24T09:31:01.020+0000 [clientcursormon]  connections:5
+2017-09-24T09:36:01.037+0000 [clientcursormon] mem (MB) res:27 virt:308
+2017-09-24T09:36:01.037+0000 [clientcursormon]  mapped:160
+2017-09-24T09:36:01.037+0000 [clientcursormon]  connections:5
+2017-09-24T09:39:09.751+0000 [conn100] end connection 127.0.0.1:35296 (4 connections now open)
+2017-09-24T09:39:09.751+0000 [conn98] end connection 127.0.0.1:35292 (4 connections now open)
+2017-09-24T09:39:09.751+0000 [conn96] end connection 127.0.0.1:35288 (4 connections now open)
+2017-09-24T09:39:09.751+0000 [conn99] end connection 127.0.0.1:35294 (2 connections now open)
+2017-09-24T09:39:09.751+0000 [conn97] end connection 127.0.0.1:35290 (4 connections now open)
+2017-09-24T09:39:12.186+0000 [initandlisten] connection accepted from 127.0.0.1:44080 #101 (1 connection now open)
+2017-09-24T09:39:12.187+0000 [initandlisten] connection accepted from 127.0.0.1:44082 #102 (2 connections now open)
+2017-09-24T09:39:12.187+0000 [initandlisten] connection accepted from 127.0.0.1:44084 #103 (3 connections now open)
+2017-09-24T09:39:12.188+0000 [initandlisten] connection accepted from 127.0.0.1:44086 #104 (4 connections now open)
+2017-09-24T09:39:12.188+0000 [initandlisten] connection accepted from 127.0.0.1:44088 #105 (5 connections now open)
+2017-09-24T09:41:01.061+0000 [clientcursormon] mem (MB) res:27 virt:308
+2017-09-24T09:41:01.061+0000 [clientcursormon]  mapped:160
+2017-09-24T09:41:01.061+0000 [clientcursormon]  connections:5
+2017-09-24T09:41:18.895+0000 [conn101] end connection 127.0.0.1:44080 (4 connections now open)
+2017-09-24T09:41:18.895+0000 [conn104] end connection 127.0.0.1:44086 (4 connections now open)
+2017-09-24T09:41:18.895+0000 [conn103] end connection 127.0.0.1:44084 (4 connections now open)
+2017-09-24T09:41:18.895+0000 [conn105] end connection 127.0.0.1:44088 (4 connections now open)
+2017-09-24T09:41:18.895+0000 [conn102] end connection 127.0.0.1:44082 (3 connections now open)
+2017-09-24T09:41:21.071+0000 [initandlisten] connection accepted from 127.0.0.1:45782 #106 (1 connection now open)
+2017-09-24T09:41:21.072+0000 [initandlisten] connection accepted from 127.0.0.1:45784 #107 (2 connections now open)
+2017-09-24T09:41:21.072+0000 [initandlisten] connection accepted from 127.0.0.1:45786 #108 (3 connections now open)
+2017-09-24T09:41:21.072+0000 [initandlisten] connection accepted from 127.0.0.1:45788 #109 (4 connections now open)
+2017-09-24T09:41:21.073+0000 [initandlisten] connection accepted from 127.0.0.1:45790 #110 (5 connections now open)
+2017-09-24T09:46:01.075+0000 [clientcursormon] mem (MB) res:27 virt:308
+2017-09-24T09:46:01.075+0000 [clientcursormon]  mapped:160
+2017-09-24T09:46:01.075+0000 [clientcursormon]  connections:5
+2017-09-24T09:51:01.089+0000 [clientcursormon] mem (MB) res:27 virt:308
+2017-09-24T09:51:01.089+0000 [clientcursormon]  mapped:160
+2017-09-24T09:51:01.089+0000 [clientcursormon]  connections:5
+2017-09-24T09:55:59.166+0000 [conn110] end connection 127.0.0.1:45790 (4 connections now open)
+2017-09-24T09:55:59.166+0000 [conn108] end connection 127.0.0.1:45786 (4 connections now open)
+2017-09-24T09:55:59.166+0000 [conn106] end connection 127.0.0.1:45782 (4 connections now open)
+2017-09-24T09:55:59.166+0000 [conn109] end connection 127.0.0.1:45788 (4 connections now open)
+2017-09-24T09:55:59.166+0000 [conn107] end connection 127.0.0.1:45784 (4 connections now open)
+2017-09-24T09:56:01.105+0000 [clientcursormon] mem (MB) res:27 virt:308
+2017-09-24T09:56:01.105+0000 [clientcursormon]  mapped:160
+2017-09-24T09:56:01.105+0000 [clientcursormon]  connections:0
+2017-09-24T09:56:19.642+0000 [initandlisten] connection accepted from 127.0.0.1:60506 #111 (1 connection now open)
+2017-09-24T10:01:01.123+0000 [clientcursormon] mem (MB) res:27 virt:308
+2017-09-24T10:01:01.123+0000 [clientcursormon]  mapped:160
+2017-09-24T10:01:01.123+0000 [clientcursormon]  connections:1
+2017-09-24T10:03:25.719+0000 [conn111] end connection 127.0.0.1:60506 (0 connections now open)
+2017-09-24T10:03:53.696+0000 [initandlisten] connection accepted from 127.0.0.1:40084 #112 (1 connection now open)
+2017-09-24T10:06:01.141+0000 [clientcursormon] mem (MB) res:27 virt:308
+2017-09-24T10:06:01.141+0000 [clientcursormon]  mapped:160
+2017-09-24T10:06:01.141+0000 [clientcursormon]  connections:1
+2017-09-24T10:11:01.162+0000 [clientcursormon] mem (MB) res:27 virt:308
+2017-09-24T10:11:01.162+0000 [clientcursormon]  mapped:160
+2017-09-24T10:11:01.162+0000 [clientcursormon]  connections:1
+2017-09-24T10:16:01.175+0000 [clientcursormon] mem (MB) res:27 virt:308
+2017-09-24T10:16:01.175+0000 [clientcursormon]  mapped:160
+2017-09-24T10:16:01.175+0000 [clientcursormon]  connections:1

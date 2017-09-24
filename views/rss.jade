@@ -3,20 +3,18 @@ if(rss && rss.channel && rss.channel.item)
 		- for (var i = 0; i < Math.floor(rss.channel.item.length/2); ++i)	{
 			li.newsarea
 				- var item = rss.channel.item[i]
-				span= '[' + item.source.$cd + ']'
-				&nbsp;
-				a(target='_blank' href= item.link.$cd title= item.title.$cd)= item.title.$cd
-				span.pub-date= item.pubDate .$cd.replace(/T/,' ').replace(/.000Z/g,'')
+				span= '[' + item.category.$t + ']'
+				a(target='_blank' href=item.link.$t title=item.title.$t)= item.title.$t
+				span.pub-date= moment(new Date(item.pubDate.$t)).format('YYYY-MM-DD HH:mm:ss')
 		-}
 	
 	ul.newstab
 		- for (i = Math.floor(rss.channel.item.length/2); i < Math.floor(rss.channel.item.length); ++i){
 			li.newsarea
 				- var item = rss.channel.item[i]
-				span= '[' + item.source.$cd + ']'
-				&nbsp;
-				a(target='_blank' href= item.link.$cd title= item.title.$cd)= item.title.$cd
-				span.pub-date= item.pubDate.$cd.replace(/T/,' ').replace(/.000Z/g,'')
+				span= '[' + item.category.$t + ']'
+				a(target='_blank' href=item.link.$t title=item.title.$t)= item.title.$t
+				span.pub-date= moment(new Date(item.pubDate.$t)).format('YYYY-MM-DD HH:mm:ss') 
 		-}
 		
 		

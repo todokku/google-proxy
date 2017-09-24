@@ -29,15 +29,15 @@ block content
 			if(!items)
 				div.rss
 					div.newschannel
-						a(href='#', data-channel='civil') 国内焦点
+						a(href='#', data-channel='top') 国内
 						&nbsp;
-						a(href='#', data-channel='net') 互联网
+						a(href='#', data-channel='world') 国际
 						&nbsp;
-						a(href='#', data-channel='tech') 科技新闻
+						a(href='#', data-channel='tech') 科技
 					div.slider
 						div.content
-							div.tab.page(data-channel='civil')
-							div.tab.page(data-channel='net')
+							div.tab.page(data-channel='top')
+							div.tab.page(data-channel='world')
 							div.tab.page(data-channel='tech')
 				include rss-js
 				
