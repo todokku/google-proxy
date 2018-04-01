@@ -14,12 +14,13 @@ var google = require('./lib/google');
 var rss = require('./lib/rss');
 var extend = require('./lib/extend');
 var request = require("request");
+/*
 var cache = require('express-redis-cache')({
     host: '127.0.0.1',
     port: 6379,
     expire: 7 * 24 * 60 * 60
 });
-
+*/
 
 
 // Parse command line options
@@ -122,7 +123,8 @@ app.get('/target', app.oauth.authorise(), function (req, res) {
 
 app.use(app.oauth.errorHandler());
 
-app.get('/search', cache.route(), function(req, res, next){
+// cache.route(),
+app.get('/search', function(req, res, next){
 	var render = {
 		root: '/search',
 		reserve: '/s'
@@ -141,10 +143,8 @@ app.get('/search', cache.route(), function(req, res, next){
 	});
 });
 
-/**/
-app.get('/rss',cache.route({
-	expire : 60 * 60 * 6
-}), function(req, res){
+//cache.route({	expire : 60 * 60 * 6}),
+app.get('/rss', function(req, res){
 	if(!req.query.c){
 		res.status(400).send('missing keyword:c!');
 		return ;
@@ -168,7 +168,7 @@ app.get('/login',  function(req,res){
 	res.render('login');
 });
 
-app.get('/autosuggest', cache.route(), function(req, res){
+app.get('/autosuggest', function(req, res){
 	
 	if(!req.query.q){
 		res.status(400).send('missing keyword:q!');
@@ -189,7 +189,7 @@ app.get('/autosuggest', cache.route(), function(req, res){
 	
 });
 
-app.get('/pref', cache.route(), function(req, res){
+app.get('/pref', function(req, res){
 	if(!req.query.language || ['zh_CN','en'].indexOf(req.query.language) == -1){
 		res.status(400).send('wrong language value! (zh_CN/en only)');
 		return ;
@@ -202,11 +202,7 @@ app.get('/pref', cache.route(), function(req, res){
 		});
 });
 
-app.get('/flushredis', function(req, res){
-	cache.del("*",function (error, removed) {
-		res.send("del:" + removed);
-	});
-});
+
 
 app.get('/redirect', function(req, res){
 	req.pipe(request(req.query.url)).pipe(res);

@@ -38,3 +38,8 @@ nohup: ignoring input
 [4242] 24 Sep 08:21:34.636 * RDB: 0 MB of memory used by copy-on-write
 [1909] 24 Sep 08:21:34.725 * Background saving terminated with success
 [1909] 24 Sep 10:03:43.626 * DB saved on disk
+[1909] 24 Sep 11:03:44.056 * 1 changes in 3600 seconds. Saving...
+[1909] 24 Sep 11:03:44.060 * Background saving started by pid 9540
+[9540] 24 Sep 11:03:44.068 * DB saved on disk
+[9540] 24 Sep 11:03:44.069 * RDB: 0 MB of memory used by copy-on-write
+[1909] 24 Sep 11:03:44.161 * Background saving terminated with success
