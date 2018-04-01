@@ -4,8 +4,7 @@ var contentDisposition = require('content-disposition');
 var pkg = require( path.join(__dirname, 'package.json') );
 
 var bodyParser = require('body-parser');
-var oauthserver = require('oauth2-server');
-var oauthModel = require("./lib/auth");
+
 
 
 var scan = require('./scan');
@@ -81,47 +80,6 @@ app.get('/scan', function(req,res){
 app.get('/', function(req, res, next){
 	res.redirect("/search");
 });
-
-require("./lib/v2/index")(app);
-
-app.oauth = oauthserver({
-  model: oauthModel, // See below for specification
-  grants: ['authorization_code', 'password', 'refresh_token', 'client_credentials'],
-  debug: true,
-  accessTokenLifetime: 30 //default 3600
-});
-
-app.all('/oauth/token', app.oauth.grant());
-
-app.all('/oauth/authorize', app.oauth.authCodeGrant(function(req, callback){
-	oauthModel.getUser(req.body.username, req.body.password, function(err,userId){
-		callback(err, !!userId, userId);
-	});
-	
-}));
-
-app.get('/oauth/confirm', function(req, res){
-	res.render("confirm",{
-		clientId: req.query.clientId,
-		redirectUri: req.query.redirectUri
-	});
-});
-app.get('/oauth/client', oauthModel.generateClient);
-
-//客户授权成功页
-app.get('/clienttoken',function(req, res){
-	res.render('client',{
-		client_id: 'ycolw8jdzpvi',
-		client_secret: 'jzlvoevtotvxtj4i',
-		code: req.query.code		
-	});
-})
-
-app.get('/target', app.oauth.authorise(), function (req, res) {
-  res.send('Secret area');
-});
-
-app.use(app.oauth.errorHandler());
 
 // cache.route(),
 app.get('/search', function(req, res, next){
