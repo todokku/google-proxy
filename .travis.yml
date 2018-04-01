@@ -1,6 +1,6 @@
 language: node_js
 node_js:
-- 0.10.44
+- 10
 before_script:
 - echo -e "Host *\n\tStrictHostKeyChecking no\n" >> ~/.ssh/config
 
@@ -9,13 +9,17 @@ before_install:
   -in id_rsa.enc -out id_rsa -d
 - git config --global user.email "609888703@qq.com"
 - git config --global user.name "zhiqiang.huang"
+
+install: true
+
+after_success:
 - eval "$(ssh-agent -s)"
 - chmod 600 id_rsa
 - ssh-add id_rsa
+- git fetch --unshallow
+- git checkout -b built
+- git add .
+- git commit -m 'built version'
+- git remote add deploy ssh://root@97.64.40.44:29029/data/wwwroot/sudoso.git
+- git push deploy built --force
 
-deploy:
-  provider: script
-  skip_cleanup: true
-  script: rsync -r -e 'ssh -p 29029' --delete-after --quiet $TRAVIS_BUILD_DIR root@97.64.40.44:/data/wwwroot/sudoso & docker stop sudoso & docker start sudoso
-  on:
-    branch: master
