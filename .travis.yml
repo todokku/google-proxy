@@ -1,6 +1,7 @@
 language: node_js
 node_js:
-- 10
+- "iojs"
+- "10"
 before_script:
 - echo -e "Host *\n\tStrictHostKeyChecking no\n" >> ~/.ssh/config
 
