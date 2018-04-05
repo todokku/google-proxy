@@ -1,4 +1,4 @@
-(function() {
+(function($) {
     var resize = function() {
         var width = $(window).width();
         //$(".content .page").width(width - 20);
@@ -31,4 +31,4 @@
     $(window).resize(resize);
 
     $(window).ready(resize);
-})();
+})(window.jQuery);

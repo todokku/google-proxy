@@ -23,7 +23,7 @@ html
 				$(this).click(function(){
 					var setting =$(this).data('pref');
 					$.ajax({
-						url: '/pref?language=' + setting,
+						url: '/pref?language=' + setting + '&prev=' + encodeURIComponent(window.location.href),
 						type: 'get'
 					}).done(function(r){
 						$('#pref-notice').text('设置' + setting  + ' ' + r  +'!').css('color','#f03').show().fadeOut(3000);

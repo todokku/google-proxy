@@ -2,13 +2,10 @@ var path = require('path');
 var express = require('express');
 var contentDisposition = require('content-disposition');
 var pkg = require( path.join(__dirname, 'package.json') );
-
+var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 
-
-
 var scan = require('./scan');
-var wow = require('./lib/wow');
 var google = require('./lib/google');
 var rss = require('./lib/rss');
 var extend = require('./lib/extend');
@@ -50,6 +47,7 @@ app.use(bodyParser.urlencoded({     // to support URL-encoded bodies
   extended: true
 })); 
 
+app.use(cookieParser());
 app.set('view engine', 'jade');
 
 // Serve static files from the frontend folder
@@ -61,9 +59,7 @@ app.use('/', express.static(path.join(__dirname, 'frontend')));
 app.use('/files', express.static(process.cwd(), {
 	index: false,
 	setHeaders: function(res, path){
-
 		// Set header to force files to download
-
 		res.setHeader('Content-Disposition', contentDisposition(path))
 
 	}
@@ -148,22 +144,26 @@ app.get('/autosuggest', function(req, res){
 });
 
 app.get('/pref', function(req, res){
-	if(!req.query.language || ['zh_CN','en'].indexOf(req.query.language) == -1){
-		res.status(400).send('wrong language value! (zh_CN/en only)');
+	if(!req.query.language || ['zh-CN','en'].indexOf(req.query.language) == -1 || !req.query.prev){
+		res.status(400).send('wrong language value! (zh-CN/en only)');
 		return ;
 	}
 	
-	wow(req,res).setPrefs(req.query.language).done(function(data){
-			res.send(data);
+	google(req,res).setPrefs(req.query.language, req.query.prev).done(function(data){
+			res.send('设置成功');
 		}).fail(function(error){
 			res.send(error);
 		});
 });
 
 
+app.get('/url', function(req, res){
+	res.redirect(req.query.q);
+});
 
-app.get('/redirect', function(req, res){
-	req.pipe(request(req.query.url)).pipe(res);
+
+app.get('/forward', function(req, res){
+	req.pipe(request(req.query.q)).pipe(res);
 });
 
 

@@ -3,9 +3,9 @@ li.search-item
 		div= item.title
 		for link in item.link
 			a(href= link.href, target='_blank')
-				img(src= link.src)
+				img(src= link.src, alt= 'result')
 	else
 		a(href=item.link, target='_blank')= item.title
 		div= item.description
 			span
-				a.soft-link(href= '/redirect?url=' + item.link, target='_blank') SNAPSHOT
+				a.soft-link(href= '/url?q=' + item.link, target='_blank') SNAPSHOT
