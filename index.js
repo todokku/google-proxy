@@ -91,7 +91,7 @@ app.get('/search', function(req, res, next){
 	
 	google(req, res).search(req.query.q, req.query.page, req.query.orig).done(function(body){
 		//res.send(body);
-		res.render("home",extend(render,this.respJSON));
+		res.render("home", extend(render,this.respJSON));
 	}).fail(function(error, resp, body){
 		res.send(body);
 	});
