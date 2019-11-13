@@ -6,43 +6,17 @@ block content
 		.container
 			p.form-item
 			div.form-item
-				
-				.flip-container.text-label()
-					.flipper
-						.front
-							a(href=root)
-								img(src= (root === '/s' && '/img/logo.png' || '/img/logo.png'))
-						.back 
-							a(href=reserve)
-								img(src=(root === '/s' && '/img/logo.png' || '/img/logo.png'))
-				input#search-box.text-input(placeholder="sudo" name='q', value= keyword, type='text', tip='关键字', tip-msg='.info-tip', succ-msg='.info-succ', req='', autocomplete='off')
+				input#search-box.text-input(placeholder="" name='q', value= keyword, type='text', tip='关键字', tip-msg='.info-tip', succ-msg='.info-succ', req='', autocomplete='off')
 				input.btn.submit-btn(type='submit', value='SO')
 				i
 				span.item-info.info-succ Go
 				span.item-info.info-tip alphabet
+			div.auto-complete-box
 
 	.header
 	
 	.container		
 		.content-left
-		
-			if(!items)
-				div.rss
-					div.newschannel
-						a(href='#', data-channel='top') 焦点
-						&nbsp;
-						a(href='#', data-channel='world') 国际
-						&nbsp;
-						a(href='#', data-channel='tech') 科技
-					div.slider
-						div.content
-							div.tab.page(data-channel='top')
-							div.tab.page(data-channel='world')
-							div.tab.page(data-channel='tech')
-				include rss-js
-				
-			
-				
 			.notice
 				span= total
 				
@@ -80,21 +54,13 @@ block content
 									a(href= root + '?q='+relevant)= relevant
 			div#pref
 				include pref
-			
 			div
-				//iframe#clip(vspace="0", hspace="0", scrolling="no", frameborder="0", name="clip", width="300", height="355", src="http://top.baidu.com/clip?b=1&hd_h_info=1&t3_color=%233D7FF2&hd_border=0&hd_meshline=0&hd_search=1&hd_trend=0&col=1&hd_h=0")
-
 
 		.clearfix
 		
 	
-	div.footer ©2015 about 
-		a(href='/') pn-paradise
-		&nbsp;
-		a(href='mailto:609888703@qq.com') email
-		&nbsp;
-		a(href='http://pnparadise.wicp.net/list.html') wetsite
-	div.auto-complete-box
+	div.footer ©2019 about &nbsp;
+		a(href='https://ggga.ga') ggga.ga
 		
 	div#tip-msg(style='font-size:22px;z-index:999;padding:30px 20px;border-radius:5px;position:fixed;left:50%;top:50%;display:none;background-color:#000;color:#ddd;opacity:0.7')
 		span#text

@@ -387,11 +387,13 @@ a:hover{
 }
 
 .container{
+	position: relative;
 	word-break: break-word;
 	word-wrap: break-word;
 }
 
 .container-s{
+	position: relative;
 	width: 1002px;
 }
 
@@ -470,9 +472,9 @@ a:hover{
 }
 
 .auto-complete-box {
-	position: fixed;
-	left: 291px;
-	top: 61px;
+	position: absolute;
+	left: 0;
+	top: 42px;
 	z-index: 999;
 	color: #777;
 	background: #fefefe;
