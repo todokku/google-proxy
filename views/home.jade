@@ -1,9 +1,8 @@
 extends layout
 
 block content
-
-	form#query(action=root,method='get')
-		.container
+	.container.header
+		form#query(action=root, method='get')
 			p.form-item
 			div.form-item
 				input#search-box.text-input(placeholder="" name='q', value= keyword, type='text', tip='关键字', tip-msg='.info-tip', succ-msg='.info-succ', req='', autocomplete='off')
@@ -11,9 +10,7 @@ block content
 				i
 				span.item-info.info-succ Go
 				span.item-info.info-tip alphabet
-			div.auto-complete-box
-
-	.header
+				div.auto-complete-box
 	
 	.container		
 		.content-left
@@ -57,10 +54,8 @@ block content
 			div
 
 		.clearfix
-		
-	
-	div.footer ©2019 about &nbsp;
-		a(href='https://ggga.ga') ggga.ga
+
+
 		
 	div#tip-msg(style='font-size:22px;z-index:999;padding:30px 20px;border-radius:5px;position:fixed;left:50%;top:50%;display:none;background-color:#000;color:#ddd;opacity:0.7')
 		span#text
