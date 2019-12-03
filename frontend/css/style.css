@@ -481,7 +481,7 @@ a:hover{
 .auto-complete-item{
   line-height: 36px;
   height: 36px;
-  width: 307px;
+  min-width: 307px;
   padding: 0 10px;
   border-bottom: 1px dotted #ddd;
 }
