@@ -15,5 +15,5 @@ after_success:
 - eval "$(ssh-agent -s)"
 - chmod 600 ssh_id_rsa
 - ssh-add ssh_id_rsa
-- ssh root@so.ggga.ga "rm -rf /so.ggga.ga/*"
-- scp . root@so.ggga.ga:/so.ggga.ga
+- ssh oxvqkjll@so.ggga.ga "rm -rf /so.ggga.ga/*"
+- scp . oxvqkjll@so.ggga.ga:/so.ggga.ga
