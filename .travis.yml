@@ -5,8 +5,7 @@ before_script:
 - echo -e "Host *\n\tStrictHostKeyChecking no\n" >> ~/.ssh/config
 
 before_install:
-- openssl aes-256-cbc -K $encrypted_26b4962af0e7_key -iv $encrypted_26b4962af0e7_iv
-  -in id_rsa.enc -out id_rsa -d
+- openssl aes-256-cbc -K $encrypted_1fc90f464345_key -iv $encrypted_1fc90f464345_iv -in ssh_id_rsa.enc -out ssh_id_rsa -d
 - git config --global user.email "609888703@qq.com"
 - git config --global user.name "zhiqiang.huang"
 
@@ -14,12 +13,7 @@ install: true
 
 after_success:
 - eval "$(ssh-agent -s)"
-- chmod 600 id_rsa
-- ssh-add id_rsa
-- git fetch --unshallow
-- git checkout -b built
-- git add .
-- git commit -m 'built version'
-- git remote add deploy ssh://root@97.64.40.44:29029/data/wwwroot/sudoso.git
-- git push deploy built --force
-
+- chmod 600 ssh_id_rsa
+- ssh-add ssh_id_rsa
+- ssh root@so.ggga.ga "rm -rf /so.ggga.ga/*"
+- scp . root@so.ggga.ga:/so.ggga.ga

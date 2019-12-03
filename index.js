@@ -97,30 +97,6 @@ app.get('/search', function(req, res, next){
 	});
 });
 
-//cache.route({	expire : 60 * 60 * 6}),
-app.get('/rss', function(req, res){
-	if(!req.query.c){
-		res.status(400).send('missing keyword:c!');
-		return ;
-	}
-	
-	rss(req.query.c, function(rss){
-		res.render('rss', rss);
-	}, function(err, resp, body){
-		res.status(400).send(body);
-	});
-});
-
-app.get('/index',  function(req,res){
-	var fs = require('fs');
-	var json = JSON.parse(fs.readFileSync('views/template/interface.json', 'utf8'));
-	res.render('template/post', json);
-});
-
-
-app.get('/login',  function(req,res){
-	res.render('login');
-});
 
 app.get('/autosuggest', function(req, res){
 	
@@ -143,26 +119,8 @@ app.get('/autosuggest', function(req, res){
 	
 });
 
-app.get('/pref', function(req, res){
-	if(!req.query.language || ['zh-CN','en'].indexOf(req.query.language) == -1 || !req.query.prev){
-		res.status(400).send('wrong language value! (zh-CN/en only)');
-		return ;
-	}
-	
-	google(req,res).setPrefs(req.query.language, req.query.prev).done(function(data){
-			res.send('设置成功');
-		}).fail(function(error){
-			res.send(error);
-		});
-});
-
 
 app.get('/url', function(req, res){
-	res.redirect(req.query.q);
-});
-
-
-app.get('/forward', function(req, res){
 	req.pipe(request(req.query.q)).pipe(res);
 });
 
