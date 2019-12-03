@@ -8,10 +8,6 @@ html
 			});	
 
 			$('#search-box').keyup(function(){
-				//$.ajax({
-				//	url: 'https://autocomplete-gsa.search.aol.com/autocomplete/get?q='+ $(this).val() +'&it=gsa-wow-search&locale=zh_CN,zh_*,*_CN,*&count=8&output=json&cb=autosuggest&echo=off',
-				//	dataType: 'jsonp'
-				//});
 				$.ajax({
 					url: '/autosuggest?q=' + $(this).val(),
 					type: 'get',
@@ -19,18 +15,6 @@ html
 				}).done(autosuggest);
 			});
 			
-			$('.pref-settings').each(function(){
-				$(this).click(function(){
-					var setting =$(this).data('pref');
-					$.ajax({
-						url: '/pref?language=' + setting + '&prev=' + encodeURIComponent(window.location.href),
-						type: 'get'
-					}).done(function(r){
-						$('#pref-notice').text('设置' + setting  + ' ' + r  +'!').css('color','#f03').show().fadeOut(3000);
-						window.location.reload();
-					});
-				});
-			});
 			$(document).click(function(e) {
 				$('.auto-complete-box').empty();
 			});

@@ -7,16 +7,9 @@ var bodyParser = require('body-parser');
 
 var scan = require('./scan');
 var google = require('./lib/google');
-var rss = require('./lib/rss');
 var extend = require('./lib/extend');
 var request = require("request");
-/*
-var cache = require('express-redis-cache')({
-    host: '127.0.0.1',
-    port: 6379,
-    expire: 7 * 24 * 60 * 60
-});
-*/
+
 
 
 // Parse command line options
@@ -80,8 +73,7 @@ app.get('/', function(req, res, next){
 // cache.route(),
 app.get('/search', function(req, res, next){
 	var render = {
-		root: '/search',
-		reserve: '/s'
+		root: '/search'
 	};
 	
 	if(!req.query.q){

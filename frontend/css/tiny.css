@@ -73,20 +73,6 @@
     margin: 10px 5px 10px 5px;
 }
 
-
-.content .page:nth-child(1) {
-    /*background-image: url('http://www.lorempixum.com/300/100/?1');*/
-}
-.content .page:nth-child(2) {
-    /*background-image: url('http://www.lorempixum.com/300/100/?2');*/
-}
-.content .page:nth-child(3) {
-    /*background-image: url('http://www.lorempixum.com/300/100/?3');*/
-}
-.content .page:nth-child(4) {
-    /*background-image: url('http://www.lorempixum.com/300/100/?4');*/
-}
-
 .newsarea{
     margin: 5px;
     border: 0px;
