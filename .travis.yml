@@ -16,4 +16,4 @@ after_success:
 - chmod 600 ssh_id_rsa
 - ssh-add ssh_id_rsa
 - ssh oxvqkjll@so.ggga.ga "rm -rf /so.ggga.ga/*"
-- scp . oxvqkjll@so.ggga.ga:/so.ggga.ga
+- scp -r . oxvqkjll@so.ggga.ga:/so.ggga.ga
