@@ -21,7 +21,7 @@ block content
 					span= ' 实际搜索: ' + hint
 				if(orig)
 					span= ' 还原搜索: ' 
-						a(href= root +'?q='+ orig + '&orig=true')= orig
+						a(href= root +'?q='+ orig + '&nfpr=1')= orig
 				if(advice)
 					span= ' 搜索建议: '
 						a(href= root + '?q=' + advice)= advice
