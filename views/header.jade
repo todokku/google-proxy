@@ -4,12 +4,55 @@ head
   link(rel="shortcut icon" href="/img/favicon.ico" type="image/x-icon")
   link(rel="stylesheet", href="/css/style.css")
   link(rel="stylesheet", media="screen and (max-device-width: 600px)", href="/css/tiny.css")
+  meta(name="viewport", content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0")
   // script(src="https://cdn.bootcss.com/jquery/2.1.1/jquery.min.js")
-  //link(rel="stylesheet", href="/css/bootstrap.css")
-  script(src="/js/jquery.min.js")
-  script(src="/js/jvalid.js")
-  script(src="/js/prettyform.js")
-  script(src="/js/resize.js")
-  script(src="/js/scroll.js")
-  script(src="/js/slider.js")
-  meta(name="viewport",content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0")
+  script(type="text/javascript")
+    include ../frontend/js/jquery.min.js
+    include ../frontend/js/jvalid.js
+    include ../frontend/js/prettyform.js
+    include ../frontend/js/resize.js
+    include ../frontend/js/scroll.js
+    include ../frontend/js/slider.js
+  script(type='text/javascript').
+    $(function () {
+      $.prettyform({
+        id: "query",	//required
+        active: false//任一表单值发生改变，每个表单项都重新检测，使用eq时推荐开启 默认false
+      });
+
+      let requestId = null;
+      $('#search-box').keyup(function () {
+        requestId = new Date().getTime();
+        $.ajax({
+          url: '/autosuggest?q=' + $(this).val(),
+          type: 'get',
+          dataType: 'json',
+          requestId: requestId
+        }).done(function (data) {
+          if (this.requestId !== requestId) {
+            return;
+          }
+          var $autocomplete = $('.auto-complete-box');
+          $autocomplete.empty();
+
+          $(data[1]).each(function (i, text) {
+
+            var target = $('<div></div>').attr('class', 'auto-complete-item').text(text[0]).click(function () {
+              $('#search-box').val($(this).text());
+              $('#query').submit();
+            });
+
+            $autocomplete.append(target);
+          });
+
+          $autocomplete.show();
+        });
+      });
+
+      $('.auto-complete-box').hide();
+
+      $(document).click(function (e) {
+        $('.auto-complete-box').hide();
+        $('.auto-complete-box').empty();
+      });
+    });
