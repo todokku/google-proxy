@@ -533,7 +533,7 @@ a:hover{
 .link-group{
 	font: 14px arial;
 	white-space: nowrap;
-	padding: 10px;
+	padding: 20px 0;
 }
 
 .notice {
@@ -584,8 +584,8 @@ a:hover{
 
 
 .footer{
-	margin: 10px 0 50px auto ;
-	padding: 10px 0 10px 121px;
+	margin: auto;
+	padding-bottom: 50px;
 }
 
 .relevants{
