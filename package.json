@@ -1,11 +1,11 @@
 {
-  "name": "proxy",
+  "name": "google-proxy",
   "version": "1.0.0",
   "private": true,
   "description": "proxy_for_google",
   "main": "index.js",
   "scripts": {
-    "dev": "node index.js -p 8080"
+    "dev": "node index.js -p 8082"
   },
   "author": "",
   "license": "ISC",
@@ -18,13 +18,8 @@
     "express": "^4.13.1",
     "express-redis-cache": "^0.3.0",
     "iconv-lite": "^0.4.19",
-    "jade": "^1.11.0",
+    "pug": "latest",
     "moment": "^2.18.1",
-    "mongodb": "^2.0.45",
-    "mongoose": "^4.4.13",
-    "oauth2-server": "^2.4.1",
-    "passport": "^0.3.0",
-    "passport-oauth": "^1.0.0",
     "recast": "^0.18.5",
     "request": "^2.60.0",
     "xml-mapping": "^1.7.1"

@@ -41,7 +41,7 @@ app.use(bodyParser.urlencoded({     // to support URL-encoded bodies
 })); 
 
 app.use(cookieParser());
-app.set('view engine', 'jade');
+app.set('view engine', 'pug');
 
 // Serve static files from the frontend folder
 
