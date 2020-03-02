@@ -20,3 +20,4 @@ after_success:
 - ssh-add ssh_id_rsa
 - ssh oxvqkjll@so.ggga.ga "rm -rf /so.ggga.ga/*"
 - scp -r . oxvqkjll@so.ggga.ga:/so.ggga.ga
+- ssh oxvqkjll@so.ggga.ga "touch /so.ggga.ga/restart.txt"
