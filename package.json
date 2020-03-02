@@ -18,7 +18,7 @@
     "express": "^4.13.1",
     "express-redis-cache": "^0.3.0",
     "iconv-lite": "^0.4.19",
-    "pug": "latest",
+    "pug": "^2.0.4",
     "moment": "^2.18.1",
     "recast": "^0.18.5",
     "request": "^2.60.0",
