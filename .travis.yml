@@ -2,8 +2,7 @@ branches:
   only:
     - master
 language: node_js
-node_js:
-- "12.4.0"
+
 before_script:
 - echo -e "Host *\n\tStrictHostKeyChecking no\n" >> ~/.ssh/config
 
@@ -12,12 +11,10 @@ before_install:
 - git config --global user.email "609888703@qq.com"
 - git config --global user.name "zhiqiang.huang"
 
-install: true
+install: skip
 
 after_success:
 - eval "$(ssh-agent -s)"
 - chmod 600 ssh_id_rsa
 - ssh-add ssh_id_rsa
-- ssh oxvqkjll@so.ggga.ga "rm -rf /so.ggga.ga/*"
-- scp -r . oxvqkjll@so.ggga.ga:/so.ggga.ga
-- ssh oxvqkjll@so.ggga.ga "touch /so.ggga.ga/restart.txt"
+- ssh -p 28998 root@so.ggga.ga < deploy.sh

@@ -1,0 +1,51 @@
+extends layout
+
+block content
+	.container.header
+		form#query(action=root, method='get')
+			p.form-item
+			div.form-item
+				input#search-box.text-input(placeholder="" name='q', value= keyword, type='text', tip='关键字', tip-msg='.info-tip', succ-msg='.info-succ', req='', autocomplete='off')
+				input.btn.submit-btn(type='submit', value='SO')
+				i
+				span.item-info.info-succ Go
+				span.item-info.info-tip alphabet
+				div.auto-complete-box
+	.container
+		.content-left
+			.notice
+				span= total
+				
+				if(hint)
+					span= ' 实际搜索: ' + hint
+				if(orig)
+					span= ' 还原搜索: ' 
+						a(href= root +'?q='+ orig + '&nfpr=1')= orig
+				if(advice)
+					span= ' 搜索建议: '
+						a(href= root + '?q=' + advice)= advice
+			if(items)
+				ul
+					for item in items
+						include item	
+			if(pagin)
+				.page.link-group 
+					for pageItem in pagin
+						if(pageItem.active)
+							a(href= root + '?q=' + keyword + '&page=' + pageItem.page)
+								span.active= pageItem.text
+						else
+							span.curr= ' '+ pageItem.text + ' '
+		.content-right
+			if(relevants && relevants.length)
+				div.relevants
+					ul.bucket
+						for relevant in relevants
+							li
+								.bucket-item
+									a(href= root + '?q='+relevant)= relevant
+		.clearfix
+	.container.footer
+
+	div#tip-msg(style='font-size:22px;z-index:999;padding:30px 20px;border-radius:5px;position:fixed;left:50%;top:50%;display:none;background-color:#000;color:#ddd;opacity:0.7')
+		span#text
