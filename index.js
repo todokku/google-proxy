@@ -113,7 +113,7 @@ app.get('/autosuggest', function(req, res){
 
 
 app.get('/url', function(req, res){
-	req.pipe(request(encodeURI(req.query.q))).pipe(res);
+	req.pipe(request({rejectUnauthorized: false, url: encodeURI(req.query.q)})).pipe(res);
 });
 
 
