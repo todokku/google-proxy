@@ -23,7 +23,8 @@
 
 				$(data[1]).each(function(i, text) {
 
-					var target = $('<div></div>').attr('class', 'auto-complete-item').text(text[0]).click(function() {
+					let pureText = $("<span></span>").html(text[0]).text();
+					var target = $('<div></div>').attr('class', 'auto-complete-item').text(pureText).click(function() {
 						$('#search-box').val($(this).text());
 						$('#query').submit();
 					});
@@ -41,5 +42,13 @@
 			$('.auto-complete-box').hide();
 			$('.auto-complete-box').empty();
 		});
+		
+		$('.language a').click(function() {
+			let language = $(this).data('language');
+			
+			window.location.href = `/setLanguage?language=${language}&redirectUrl=` + encodeURIComponent(window.location.href);
+	
+		})
+	
 	});
 })(window.jQuery);

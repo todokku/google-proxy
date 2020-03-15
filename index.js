@@ -1,13 +1,10 @@
 var path = require('path');
 var express = require('express');
-var contentDisposition = require('content-disposition');
 var pkg = require( path.join(__dirname, 'package.json') );
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 
-var scan = require('./scan');
 var google = require('./lib/google');
-var extend = require('./lib/extend');
 var request = require("request");
 
 
@@ -22,13 +19,6 @@ program
 	.parse(process.argv);
 
 var port = program.port || 8080;
-
-
-// Scan the directory in which the script was called. It will
-// add the 'files/' prefix to all files and folders, so that
-// download links point to our /files route
-
-var tree = scan('.', 'files');
 
 
 // Ceate a new express app
@@ -47,24 +37,7 @@ app.set('view engine', 'pug');
 
 app.use('/', express.static(path.join(__dirname, 'frontend')));
 
-// Serve files from the current directory under the /files route
 
-app.use('/files', express.static(process.cwd(), {
-	index: false,
-	setHeaders: function(res, path){
-		// Set header to force files to download
-		res.setHeader('Content-Disposition', contentDisposition(path))
-
-	}
-}));
-
-app.locals.moment = require('moment');
-
-// This endpoint is requested by our frontend JS
-
-app.get('/scan', function(req,res){
-	res.send(tree);
-});
 
 app.get('/', function(req, res, next){
 	res.redirect("/search");
@@ -72,19 +45,15 @@ app.get('/', function(req, res, next){
 
 // cache.route(),
 app.get('/search', function(req, res, next){
-	var render = {
-		root: '/search'
-	};
 	
 	if(!req.query.q){
-		res.render('home', render);
+		res.render('home', {language: google(req, res).getLanguage()});
 		return ;
 	}
 	
-	google(req, res).search(req.query.q, req.query.page, req.query).done(function(body){
-		//res.send(body);
-		res.render("home", extend(render,this.respJSON));
-	}).fail(function(error, resp, body){
+	google(req, res).search(req.query.q, req.query.page, req.query).then(function(body){
+		res.render("home", body);
+	}).catch(function(error, resp, body){
 		res.send(body);
 	});
 });
@@ -103,12 +72,26 @@ app.get('/autosuggest', function(req, res){
 	}
 	
 	
-	google(req, res).autoComplete(req.query.q).done(function(){
-			res.send(this.body);
-		}).fail(function(error){
-			res.send(error);
-		});
+	google(req, res).autoComplete(req.query.q).then(function(body){
+		res.send(body);
+	}).catch(function(error){
+		console.error(error)
+		res.send(error);
+	});
 	
+});
+
+app.get('/setLanguage', function(req, res){
+	let redirectUrl = req.query.redirectUrl || "/search";
+	if(['en', 'zh_CN'].indexOf(req.query.language) == -1){
+		res.redirect(redirectUrl);
+	}
+	google(req, res).setLanguage(req.query.language).then(function(body){
+		res.redirect(redirectUrl);
+	}).catch(function(error){
+		console.error(error)
+		res.redirect(redirectUrl);
+	});
 });
 
 
@@ -121,4 +104,4 @@ app.get('/url', function(req, res){
 
 app.listen(port);
 
-console.log('Cute files is running on port ' + port);
+console.log('server is running on port ' + port);

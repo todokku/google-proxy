@@ -1,6 +1,6 @@
 $.extend({
 	prettyform:function(form){
-		$(".item-info").each(function(){$(this).css("display","none");});
+		$(".item-info").not('.info-default').css("display","none");
 		var $form =$("form#"+form.id);
 		//remean checkox req cause checkbox value is no empty(on/off), in result: remote will disable
 		$form.find(":input[type=checkbox]").each(function(){

@@ -154,6 +154,12 @@ a:hover{
 	overflow: visible;
 }
 
+.info-default {
+	margin-top: 4px;
+	height: 42px;
+    line-height: 42px;/* 1行 */
+}
+
 .text-input-error {
 	border-color: #fc4343;
 }
@@ -467,6 +473,10 @@ a:hover{
 
 .header{
 	height: 88px;
+}
+
+.language {
+	padding: 0 !important;
 }
 
 .auto-complete-box {
