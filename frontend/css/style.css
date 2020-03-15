@@ -155,7 +155,6 @@ a:hover{
 }
 
 .info-default {
-	margin-top: 4px;
 	height: 42px;
     line-height: 42px;/* 1行 */
 }
@@ -477,6 +476,10 @@ a:hover{
 
 .language {
 	padding: 0 !important;
+}
+
+.language span {
+	margin-top: 4px;
 }
 
 .auto-complete-box {
