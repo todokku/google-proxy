@@ -1,12 +1,12 @@
 li.search-item
 	if(item.type === "image")
-		div= item.title
+		div.title= item.title
 		for link in item.link
 			a(href= link.href, target='_blank')
 				img(id= link.id, alt= 'result', height= link.height, width= link.width, src= link.src)
 		script!= item.script
 	else
-		a(href=item.link, target='_blank')= item.title
-		div= item.description
+		a.title(href=item.link, target='_blank')= item.title
+		div!= item.description
 			span
 				a.soft-link(href= 'https://redirect.ggga.ga/-----' + item.link, target='_blank') SNAPSHOT

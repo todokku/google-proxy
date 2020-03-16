@@ -550,11 +550,11 @@ a:hover{
 }
 
 .notice {
-	line-height: 40px;
+	line-height: 32px;
 }
 
 .search-item{
-	line-height: 40px;
+	line-height: 32px;
 	padding: 10px;
 	border-bottom: 1px solid #f3f3f3;
 }
@@ -566,12 +566,16 @@ a:hover{
 	text-decoration: none;
 }
 
-.search-item:hover a:hover{
+.search-item:hover .title, .search-item:hover .soft-link:hover{
 	text-decoration: underline;
 }
 
 .search-item:hover a{
 	color: #06c;
+}
+
+.search-item:hover em{
+	color: #f00;
 }
 
 .search-item:hover{
@@ -582,17 +586,8 @@ a:hover{
 	box-shadow: 0 1px 5px rgba(0, 0, 0, 0.15);
 }
 
-.slider { 
-	overflow: hidden; 
-}
-
-.slider .content { 
-	position: relative;
-}
-
-.slider .content .page { 
-   	float: left;
-    width: 100%;
+.search-item em {
+	color: #c00;
 }
 
 
@@ -647,11 +642,7 @@ ul.bucket li:hover .bucket-item{
 }
 
 a.soft-link{
-	font-size: 10px;
-	padding: 5px;
+	padding-left: 10px;
 	color:#666;
 }
 
-.logo{
-	width: 200px;
-}
