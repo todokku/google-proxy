@@ -643,6 +643,7 @@ ul.bucket li:hover .bucket-item{
 
 a.soft-link{
 	padding-left: 10px;
-	color:#666;
+	font-weight: normal;
+    color: #000;
 }
 
