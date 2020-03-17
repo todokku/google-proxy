@@ -7,7 +7,7 @@ var bodyParser = require('body-parser');
 var google = require('./lib/google');
 var request = require("request");
 
-
+let websiteList = require( path.join(__dirname, 'website.json') );
 
 // Parse command line options
 
@@ -47,7 +47,7 @@ app.get('/', function(req, res, next){
 app.get('/search', function(req, res, next){
 	
 	if(!req.query.q){
-		res.render('home', {language: google(req, res).getLanguage()});
+		res.render('home', {language: google(req, res).getLanguage(), websiteList: websiteList });
 		return ;
 	}
 	
