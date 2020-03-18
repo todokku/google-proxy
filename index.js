@@ -81,6 +81,10 @@ app.get('/autosuggest', function(req, res){
 	
 });
 
+app.get('/reloadWebsite', function(req, res){
+	 websiteList = require( path.join(__dirname, 'website.json') );
+});
+
 app.get('/setLanguage', function(req, res){
 	let redirectUrl = req.query.redirectUrl || "/search";
 	if(['en', 'zh_CN'].indexOf(req.query.language) == -1){
