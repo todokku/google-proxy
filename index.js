@@ -83,6 +83,7 @@ app.get('/autosuggest', function(req, res){
 
 app.get('/reloadWebsite', function(req, res){
 	 websiteList = require( path.join(__dirname, 'website.json') );
+	 res.end("reload success");
 });
 
 app.get('/setLanguage', function(req, res){
