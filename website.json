@@ -43,13 +43,16 @@
 		"title": "Json格式化",
 		"href": "http://bejson.com/"
 	}, {
+		"title": "Html格式化",
+		"href": "https://htmlformatter.com/"
+	},{
 		"title": "Cron表达式",
 		"href": "http://cron.qqe2.com/"
 	}, {
 		"title": "Markdown插件",
 		"href": "https://chrome.google.com/webstore/detail/markdown-viewer/ckkdlimhmcjmikdlpkmbgfkaikojcbjk"
 	}, {
-		"title": "GitHub源码",
-		"href": "https://github.com/pnparadise/google-proxy"
+		"title": "问题反馈",
+		"href": "https://github.com/pnparadise/google-proxy/issues"
 	}]
 }]

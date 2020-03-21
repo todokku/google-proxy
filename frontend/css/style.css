@@ -14,8 +14,12 @@ html {
 	background: #FFF;
 }
 
-address, cite, dfn, em, var {
+address, cite, dfn, em, var, b {
 	font-style: normal;
+}
+
+b{
+	font-weight: normal;
 }
 
 ul, ol {
@@ -560,11 +564,10 @@ a:hover{
 
 .search-item a{
 	color: #06c;
-	font-weight: bold;
 	text-decoration: none;
 }
 
-.search-item:hover .title, .search-item:hover .soft-link:hover{
+.search-item:hover .title, .search-item .soft-link:hover, .search-item .group-title:hover{
 	text-decoration: underline;
 }
 
@@ -572,8 +575,12 @@ a:hover{
 	color: #06c;
 }
 
-.search-item:hover em{
+.search-item:hover em, .search-item:hover b{
 	color: #f00;
+}
+
+.search-item a.title, .search-item a.title em,  .search-item a.title b {
+	font-weight: bold;
 }
 
 .search-item:hover{
@@ -584,8 +591,12 @@ a:hover{
 	box-shadow: 0 1px 5px rgba(0, 0, 0, 0.15);
 }
 
-.search-item em {
+.search-item em, .search-item b{
 	color: #c00;
+}
+
+.search-item:hover .group-title{
+	font-weight: bold;
 }
 
 
