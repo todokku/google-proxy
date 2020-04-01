@@ -16,11 +16,10 @@
     </a>
 </p>
 
-# proxy
+## proxy google
 ```
     proxy google search via nodejs server
-    
-    minify ui / faster respond 
+    minify ui & faster respond 
 ```
 
 ## easy start

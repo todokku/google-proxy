@@ -51,7 +51,7 @@ app.get('/search', function(req, res, next){
 		return ;
 	}
 	
-	let time = new Date().toISOString().replace(/T/, ' ').replace(/\..+/, '');
+	let time = new Date().toLocaleString();
 	console.info(time + " " + req.query.q);
 	
 	google(req, res).search(req.query.q, req.query.page, req.query).then(function(body){
