@@ -8,13 +8,13 @@ li.search-item
 	else if(item.type === "group")
 		div
 			a.title(href=item.titleLink, target='_blank')!= item.title	
-			a.soft-link(href= 'https://r.hzb6.cn/-----' + item.titleLink, target='_blank') SNAPSHOT
+			a.soft-link(href= '/url?q=' + item.titleLink, target='_blank') SNAPSHOT
 		for link in item.link
 			div
 				a.group-title(href= link.href, target='_blank')!= link.title
 				span!= link.description
-					a.soft-link(href= 'https://r.hzb6.cn/-----' + link.href, target='_blank') SNAPSHOT
+					a.soft-link(href= '/url?q=' + link.href, target='_blank') SNAPSHOT
 	else
 		a.title(href=item.link, target='_blank')= item.title
 		div!= item.description
-			a.soft-link(href= 'https://r.hzb6.cn/-----' + item.link, target='_blank') SNAPSHOT
+			a.soft-link(href= '/url?q=' + item.link, target='_blank') SNAPSHOT

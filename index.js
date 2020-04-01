@@ -51,7 +51,8 @@ app.get('/search', function(req, res, next){
 		return ;
 	}
 	
-	console.info(req.query.q);
+	let time = new Date().toISOString().replace(/T/, ' ').replace(/\..+/, '');
+	console.info(time + " " + req.query.q);
 	
 	google(req, res).search(req.query.q, req.query.page, req.query).then(function(body){
 		res.render("home", body);
@@ -99,7 +100,8 @@ app.get('/setLanguage', function(req, res){
 
 
 app.get('/url', function(req, res){
-	req.pipe(request({rejectUnauthorized: false, url: encodeURI(req.query.q)})).pipe(res);
+	res.redirect('https://r.5432.pro/-----' + req.query.q);
+	//req.pipe(request({rejectUnauthorized: false, url: encodeURI(req.query.q)})).pipe(res);
 });
 
 
