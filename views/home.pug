@@ -55,6 +55,8 @@ block content
 								span.active= pageItem.text
 						else
 							span.curr= pageItem.text
+			if(notResult)
+				div!= notResult
 		.content-right
 			if(relevants && relevants.length)
 				div.relevants
