@@ -19,3 +19,19 @@ head
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
     gtag('config', 'UA-160357579-1');
+  - var nationalDay = new Date().getTime() >= 1585958400000 && new Date().getTime() < 1586044800000
+  if(nationalDay)
+    style.
+      html {
+        -webkit-filter: grayscale(100%);
+        -moz-filter: grayscale(100%);
+        -ms-filter: grayscale(100%);
+        -o-filter: grayscale(100%);
+        filter:progidXImageTransform.Microsoft.BasicImage(grayscale=1);  
+        _filter:none;
+      }
+    script.
+      $(function(){
+        $('input[name="q"]').attr('placeholder', '沉痛悼念抗击新冠肺炎疫情的牺牲烈士和逝世同胞')
+      });
+      

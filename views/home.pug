@@ -26,12 +26,13 @@ block content
 			if(websiteList)
 				.link-grid
 					for grouplinks in websiteList
-						.link-row
-							.link-bucket.link-title= grouplinks.title
-							.link-grouplist
-								for link in grouplinks.links
-									.link-bucket
-										a(href=link.href, target='_blank')= link.title
+						if(!grouplinks.national || nationalDay)
+							.link-row
+								.link-bucket.link-title= grouplinks.title
+								.link-grouplist
+									for link in grouplinks.links
+										.link-bucket
+											a(href=link.href, target='_blank')= link.title
 			.notice
 				span= total
 				

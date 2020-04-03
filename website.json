@@ -55,4 +55,14 @@
 		"title": "问题反馈",
 		"href": "https://github.com/pnparadise/google-proxy/issues"
 	}]
+}, {
+	"national": true,
+	"title": "抗疫",
+	"links": [{
+		"title": "新冠肺炎最新疫情/Anti-COVID-19",
+		"href": "https://news.qq.com/zt2020/page/feiyan.htm#/global"
+	},{
+		"title": "全国哀悼日/national day of mourning",
+		"href": "https://new.qq.com/rain/a/20200403A07B7500"
+	}]
 }]
