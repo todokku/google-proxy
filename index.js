@@ -89,6 +89,7 @@ app.get('/setLanguage', function(req, res){
 	let redirectUrl = req.query.redirectUrl || "/search";
 	if(['en', 'zh_CN'].indexOf(req.query.language) == -1){
 		res.redirect(redirectUrl);
+		return ;
 	}
 	google(req, res).setLanguage(req.query.language).then(function(body){
 		res.redirect(redirectUrl);
@@ -104,6 +105,9 @@ app.get('/url', function(req, res){
 	//req.pipe(request({rejectUnauthorized: false, url: encodeURI(req.query.q)})).pipe(res);
 });
 
+app.get('/ref', function(req, res){
+	req.pipe(request({rejectUnauthorized: false, url: encodeURI(req.query.q)})).pipe(res);
+});
 
 // Everything is setup. Listen on the port.
 
