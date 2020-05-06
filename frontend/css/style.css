@@ -50,7 +50,7 @@ a:hover{
 	background: #d9d9d9;
 }
 
-::-webkit-scrollbar-track, 
+::-webkit-scrollbar-track,
 ::-webkit-scrollbar-track-piece {
 	background: -webkit-gradient(linear, left top, right top, from(#f6f6f6), color-stop(50%, #fff), color-stop(75%, #fff), to(#fdfdfd));
 	width: 11px;
@@ -347,10 +347,10 @@ a:hover{
 }
 
 .wrapper {
-/* 
+/*
 	position: fixed;右上显示
     top: 0;
-    right: 0; 
+    right: 0;
     width: 200px;
 */
     margin-right: 20px;
@@ -641,7 +641,7 @@ ul.bucket li:hover{
 
 ul.bucket li a:hover{
 	text-decoration: none;
-	
+
 }
 
 ul.bucket li:hover .bucket-item{
@@ -695,7 +695,12 @@ div ~ a.soft-link {
 	cursor: pointer;
 }
 
-.link-grid .link-bucket a, .link-grid .link-title{
-	color: #333;	
+.link-grid a.link-bucket, .link-grid .link-title{
+	color: #333;
 	text-decoration: none;
+}
+
+.link-grid a.link-bucket.hot{
+	color: red;
+	font-weight: bolder;
 }

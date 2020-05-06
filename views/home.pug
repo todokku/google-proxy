@@ -2,7 +2,7 @@ extends layout
 
 block content
 	.container.header
-	
+
 		form#query(action='/search', method='get')
 			p.form-item
 			div.form-item
@@ -11,7 +11,7 @@ block content
 				span.item-info.info-succ Go
 				span.item-info.info-tip alphabet
 				span.item-info.info-default.page.link-group.language
-					if(language == 'en')
+					if(language === 'en')
 						span.curr EN
 						a(href='#', data-language="zh_CN")
 							span.active 中文
@@ -20,7 +20,7 @@ block content
 							span.active EN
 						span.curr 中文
 				div.auto-complete-box
-				
+
 	.container
 		.content-left
 			if(websiteList)
@@ -31,15 +31,14 @@ block content
 								.link-bucket.link-title= grouplinks.title
 								.link-grouplist
 									for link in grouplinks.links
-										.link-bucket
-											a(href=link.href, target='_blank')= link.title
+										a.link-bucket(href=link.href, target='_blank', class=(link.hot ? 'hot': ''))= link.title
 			.notice
 				span= total
-				
+
 				if(hint)
 					span= ' 实际搜索: ' + hint
 				if(orig)
-					span= ' 还原搜索: ' 
+					span= ' 还原搜索: '
 						a(href= '/search?q='+ orig + '&nfpr=1')= orig
 				if(advice)
 					span= ' 搜索建议: '
@@ -47,9 +46,9 @@ block content
 			if(items)
 				ul
 					for item in items
-						include item	
+						include item
 			if(pagin)
-				.page.link-group 
+				.page.link-group
 					for pageItem in pagin
 						if(pageItem.active)
 							a(href= '/search?q=' + keyword + '&page=' + pageItem.page)
@@ -66,7 +65,7 @@ block content
 							li
 								.bucket-item
 									a(href= '/search?q='+relevant)= relevant
-			
+
 		.clearfix
 	.container.footer
 
