@@ -28,7 +28,7 @@ var app = express();
 app.use(bodyParser.json());       // to support JSON-encoded bodies
 app.use(bodyParser.urlencoded({     // to support URL-encoded bodies
   extended: true
-})); 
+}));
 
 app.use(cookieParser());
 app.set('view engine', 'pug');
@@ -45,15 +45,15 @@ app.get('/', function(req, res, next){
 
 // cache.route(),
 app.get('/search', function(req, res, next){
-	
+
 	if(!req.query.q){
 		res.render('home', {language: google(req, res).getLanguage(), websiteList: websiteList });
 		return ;
 	}
-	
+
 	let time = new Date().toLocaleString();
 	console.info(time + " " + req.query.q);
-	
+
 	google(req, res).search(req.query.q, req.query.page, req.query).then(function(body){
 		res.render("home", body);
 	}).catch(function(error, resp, body){
@@ -63,31 +63,31 @@ app.get('/search', function(req, res, next){
 
 
 app.get('/autosuggest', function(req, res){
-	
+
 	if(!req.query.q){
 		res.status(400).send('missing keyword:q!');
 		return ;
 	}
-	
+
 	if(req.query.q.length > 64){
 		res.status(400).send('keyword too long!');
 		return ;
 	}
-	
-	
+
+
 	google(req, res).autoComplete(req.query.q).then(function(body){
 		res.send(body);
 	}).catch(function(error){
 		console.error(error)
 		res.send(error);
 	});
-	
+
 });
 
 
 app.get('/setLanguage', function(req, res){
 	let redirectUrl = req.query.redirectUrl || "/search";
-	if(['en', 'zh_CN'].indexOf(req.query.language) == -1){
+	if(['en', 'zh_CN'].indexOf(req.query.language) === -1){
 		res.redirect(redirectUrl);
 		return ;
 	}
