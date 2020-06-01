@@ -5,10 +5,16 @@
 		"href": "http://gufenso.coderschool.cn/"
 	}, {
 		"title": "全球主机论坛",
-		"href": "https://hostloc.88.workers.dev/forum-45-1.html"
+		"href": "https://hostloc.com"
 	}, {
 		"title": "古博vps监控",
 		"href": "https://ping.gubo.org/"
+	},{
+		"title": "免费电影",
+		"href": "http://www.922dy.cc"
+	},{
+		"title": "至简图链",
+		"href": "https://search.ggga.ga"
 	}]
 }, {
 	"title": "常用",
@@ -29,11 +35,10 @@
 		"href": "https://protonmail.com/"
 	}]
 }, {
-	"title": "低价建站",
+	"title": "价优",
 	"links": [{
 		"title": "美西cn2gia-17r/m",
-		"href": "https://my.hostyun.com/page.aspx?c=referral&u=17606",
-		"hot": true
+		"href": "https://my.hostyun.com/page.aspx?c=referral&u=17606"
 	},{
 		"title": "香港虚拟主机",
 		"href": "https://upyun.cc/aff.php?aff=26"
@@ -41,25 +46,33 @@
 		"title": "韩国虚拟主机",
 		"href": "https://cn.krhost.net/"
 	}]
-}, {
-	"title": "便捷",
-	"links": [{
-		"title": "Json格式化",
-		"href": "http://bejson.com/"
+},
+	{
+		"title": "大牌稳定VPS",
+		"links": [ {
+			"title": "vultr支持支付宝-按时计费",
+			"href": "https://www.vultr.com/?ref=7467913"
+		}]
+	},
+	{
+		"title": "便捷",
+		"links": [{
+			"title": "Json格式化",
+			"href": "http://bejson.com/"
+		}, {
+			"title": "Html格式化",
+			"href": "https://htmlformatter.com/"
+		},{
+			"title": "Cron表达式",
+			"href": "http://cron.qqe2.com/"
+		}, {
+			"title": "Markdown插件",
+			"href": "https://chrome.google.com/webstore/detail/markdown-viewer/ckkdlimhmcjmikdlpkmbgfkaikojcbjk"
+		}, {
+			"title": "问题反馈",
+			"href": "https://github.com/pnparadise/google-proxy/issues"
+		}]
 	}, {
-		"title": "Html格式化",
-		"href": "https://htmlformatter.com/"
-	},{
-		"title": "Cron表达式",
-		"href": "http://cron.qqe2.com/"
-	}, {
-		"title": "Markdown插件",
-		"href": "https://chrome.google.com/webstore/detail/markdown-viewer/ckkdlimhmcjmikdlpkmbgfkaikojcbjk"
-	}, {
-		"title": "问题反馈",
-		"href": "https://github.com/pnparadise/google-proxy/issues"
-	}]
-}, {
 	"national": true,
 	"title": "抗疫",
 	"links": [{
