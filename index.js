@@ -5,10 +5,7 @@ const cookieParser = require('cookie-parser');
 const bodyParser = require('body-parser');
 
 const google = require('./lib/google');
-const https = require("https");
-const http = require('http');
-const url = require("url");
-const httpAgent = require('https-proxy-agent');
+const moment = require('moment');
 
 let websiteList = require( path.join(__dirname, 'website.json') );
 
@@ -55,7 +52,7 @@ app.get('/search', function(req, res, next){
 		return ;
 	}
 
-	let time = new Date().toLocaleString();
+	let time = moment(new Date()).format("YYYY-MM-DD HH:mm:ss");
 
 	console.info( time + " " + req.query.q);
 
