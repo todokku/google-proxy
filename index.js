@@ -55,9 +55,7 @@ app.get('/search', function(req, res, next){
 		return ;
 	}
 
-	let time = new Date().toISOString().
-		replace(/T/, ' ').      // replace T with a space
-		replace(/\..+/, '');
+	let time = new Date().toLocaleString();
 
 	console.info( time + " " + req.query.q);
 
