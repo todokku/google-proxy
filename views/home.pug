@@ -6,17 +6,17 @@ block content
 		form#query(action='/search', method='get')
 			p.form-item
 			div.form-item
-				input#search-box.text-input(placeholder="" name='q', value= keyword, type='text', tip='关键字', tip-msg='.info-tip', succ-msg='.info-succ', req, req-msg=".info-default" autocomplete='off')
+				input#search-box.text-input(placeholder="" name='q', value= q, type='text', tip='关键字', tip-msg='.info-tip', succ-msg='.info-succ', req, req-msg=".info-default" autocomplete='off')
 				input.btn.submit-btn(type='submit', value='SO')
 				span.item-info.info-succ Go
 				span.item-info.info-tip alphabet
 				span.item-info.info-default.page.link-group.language
-					if(language === 'en')
+					if(hl === 'en')
 						span.curr EN
-						a(href='#', data-language="zh_CN")
+						a(href='#', data-hl="zh_CN")
 							span.active 中文
 					else
-						a(href='#' data-language="en")
+						a(href='#' data-hl="en")
 							span.active EN
 						span.curr 中文
 				div.auto-complete-box
@@ -39,10 +39,10 @@ block content
 					span= ' 实际搜索: ' + hint
 				if(orig)
 					span= ' 还原搜索: '
-						a(href= '/search?q='+ orig + '&nfpr=1')= orig
+						a(href= '/search?q='+ encodeURIComponent(orig) + '&nfpr=1')= orig
 				if(advice)
 					span= ' 搜索建议: '
-						a(href= '/search?q=' + advice)= advice
+						a(href= '/search?q=' + encodeURIComponent(advice))= advice
 			if(items)
 				ul
 					for item in items
@@ -51,7 +51,7 @@ block content
 				.page.link-group
 					for pageItem in pagin
 						if(pageItem.active)
-							a(href= '/search?q=' + keyword + '&page=' + pageItem.page)
+							a(href= '/search?q=' + encodeURIComponent(q) + '&start=' + pageItem.page)
 								span.active= pageItem.text
 						else
 							span.curr= pageItem.text
@@ -64,7 +64,7 @@ block content
 						for relevant in relevants
 							li
 								.bucket-item
-									a(href= '/search?q='+relevant)= relevant
+									a(href= '/search?q='+ encodeURIComponent(relevant))= relevant
 
 		.clearfix
 	.container.footer

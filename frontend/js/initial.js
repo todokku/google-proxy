@@ -10,7 +10,7 @@
 		$('#search-box').keyup(function() {
 			requestId = new Date().getTime();
 			$.ajax({
-				url: '/autosuggest?q=' + $(this).val(),
+				url: '/complete/search?q=' + encodeURIComponent($(this).val()),
 				type: 'get',
 				dataType: 'json',
 				requestId: requestId
@@ -42,13 +42,13 @@
 			$('.auto-complete-box').hide();
 			$('.auto-complete-box').empty();
 		});
-		
+
 		$('.language a').click(function() {
-			let language = $(this).data('language');
-			
-			window.location.href = `/setLanguage?language=${language}&redirectUrl=` + encodeURIComponent(window.location.href);
-	
+			let hl = $(this).data('hl');
+
+			window.location.href = `/setLanguage?hl=${hl}&redirectUrl=` + encodeURIComponent(window.location.href);
+
 		})
-	
+
 	});
 })(window.jQuery);

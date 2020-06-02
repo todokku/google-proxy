@@ -15,6 +15,7 @@ let websiteList = require( path.join(__dirname, 'website.json') );
 // Parse command line options
 
 var program = require('commander');
+const {proxy} = require("./lib/proxy");
 
 program
 	.version(pkg.version)
@@ -50,22 +51,26 @@ app.get('/', function(req, res, next){
 app.get('/search', function(req, res, next){
 
 	if(!req.query.q){
-		res.render('home', {language: google(req, res).getLanguage(), websiteList: websiteList });
+		res.render('home', {hl: google(req, res).getLanguage(), websiteList: websiteList });
 		return ;
 	}
 
-	let time = new Date().toLocaleString();
-	console.info(time + " " + req.query.q);
+	let time = new Date().toISOString().
+		replace(/T/, ' ').      // replace T with a space
+		replace(/\..+/, '');
+
+	console.info( time + " " + req.query.q);
 
 	google(req, res).search().then(function(body){
 		res.render("home", body);
-	}).catch(function(error, resp, body){
-		res.send(body);
+	}).catch(function(error){
+		console.error(error);
+		res.render('home', {hl: google(req, res).getLanguage(), websiteList: websiteList });
 	});
 });
 
 
-app.get('/autosuggest', function(req, res){
+app.get('/complete/search', function(req, res){
 
 	if(!req.query.q){
 		res.status(400).send('missing keyword:q!');
@@ -78,10 +83,10 @@ app.get('/autosuggest', function(req, res){
 	}
 
 
-	google(req, res).autoComplete(req.query.q).then(function(body){
-		res.send(body);
+	google(req, res).complete().then(function(json){
+		res.send(json);
 	}).catch(function(error){
-		console.error(error)
+		console.error(error);
 		res.send(error);
 	});
 
@@ -90,14 +95,14 @@ app.get('/autosuggest', function(req, res){
 
 app.get('/setLanguage', function(req, res){
 	let redirectUrl = req.query.redirectUrl || "/search";
-	if(['en', 'zh_CN'].indexOf(req.query.language) === -1){
+	if(['en', 'zh_CN'].indexOf(req.query.hl) === -1){
 		res.redirect(redirectUrl);
 		return ;
 	}
-	google(req, res).setLanguage(req.query.language).then(function(body){
+	google(req, res).setLanguage(req.query.hl).then(function(){
 		res.redirect(redirectUrl);
 	}).catch(function(error){
-		console.error(error)
+		console.error(error);
 		res.redirect(redirectUrl);
 	});
 });
@@ -110,39 +115,14 @@ app.get('/url', function(req, res){
 
 app.get('/ref', function(request, response){
 	request.pause();
-	let options = url.parse(request.query.q);
-	options.method = request.method;
-	options.headers = {
-		'accept': '*/*',
-		'accept-language': 'zh-CN,zh;q=0.9,la;q=0.8',
-		'accept-encoding': 'gzip, deflate, br',
-		'cache-control': 'no-cache',
-		'host': options.host,
-		'sec-fetch-mode': "cors",
-		'sec-fetch-site': "cross-site",
-		'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.61 Safari/537.36'
-	};
-	options.agent = process.env.http_proxy && new httpAgent(process.env.http_proxy) || false;
+	request.url = request.query.q;
+	request.query = null;
+	proxy(request, response).then(response =>{
+		response.status(200)
+	}).finally(() =>{
+		request.resume();
+	})
 
-	let connector = null;
-	if(options.protocol === 'https:'){
-		connector = https.request(options, function(serverResponse) {
-			serverResponse.pause();
-			response.writeHeader(serverResponse.statusCode, serverResponse.headers);
-			serverResponse.pipe(response);
-			serverResponse.resume();
-		});
-	}else{
-		connector = http.request(options, function(serverResponse) {
-			serverResponse.pause();
-			response.writeHeader(serverResponse.statusCode, serverResponse.headers);
-			serverResponse.pipe(response);
-			serverResponse.resume();
-		});
-	}
-
-	request.pipe(connector);
-	request.resume();
 });
 
 // Everything is setup. Listen on the port.
