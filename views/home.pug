@@ -1,12 +1,27 @@
 extends layout
 
 block content
+	- let params = new URL(url).searchParams;
+	- let tbs = params.get('tbs');
+	- let lr = params.get('lr');
+	- let search = (query) => { let params = new URL(url).searchParams; for(const key in query){ params.set(key, query[key]); } ;  if(query['start'] === undefined) { params.delete('start'); !query['nfpr'] && params.delete('nfpr'); }   return '/search?' + params.toString(); };
 	.container.header
-
 		form#query(action='/search', method='get')
 			p.form-item
 			div.form-item
 				input#search-box.text-input(placeholder="" name='q', value= q, type='text', tip='关键字', tip-msg='.info-tip', succ-msg='.info-succ', req, req-msg=".info-default" autocomplete='off')
+				select(name ="tbs")
+					option(value='0' selected=(tbs === '0'))  所有结果
+					option(value='qdr:h' selected=(tbs === 'qdr:h')) 最近一小时
+					option(value='qdr:d' selected=(tbs === 'qdr:d')) 最近一天
+					option(value='qdr:w' selected=(tbs === 'qdr:w')) 最近一周
+					option(value='qdr:m' selected=(tbs === 'qdr:m')) 最近一月
+					option(value='qdr:y' selected=(tbs === 'qdr:y')) 最近一年
+					option(value='li:1' selected=(tbs === 'li:1')) 精确匹配
+				select(name ="lr")
+					option(value='' selected=(lr === '')) 所有网页
+					option(value='lang_zh-CN|lang_zh-TW' selected=(lr === 'lang_zh-CN|lang_zh-TW')) 中文网页
+					option(value='lang_zh-CN' selected=(lr === 'lang_zh-CN')) 简体中文
 				input.btn.submit-btn(type='submit', value='SO')
 				span.item-info.info-succ Go
 				span.item-info.info-tip alphabet
@@ -23,26 +38,17 @@ block content
 
 	.container
 		.content-left
-			if(websiteList)
-				.link-grid
-					for grouplinks in websiteList
-						if(!grouplinks.national || nationalDay)
-							.link-row
-								.link-bucket.link-title= grouplinks.title
-								.link-grouplist
-									for link in grouplinks.links
-										a.link-bucket(href=link.href, target='_blank', class=(link.hot ? 'hot': ''))= link.title
 			.notice
-				span= total
 
 				if(hint)
 					span= ' 实际搜索: ' + hint
 				if(orig)
 					span= ' 还原搜索: '
-						a(href= '/search?q='+ encodeURIComponent(orig) + '&nfpr=1')= orig
+						a(href= search({ q: orig, nfpr: 1}))= orig
 				if(advice)
 					span= ' 搜索建议: '
-						a(href= '/search?q=' + encodeURIComponent(advice))= advice
+						a(href= search({ q: advice }))= advice
+				div= total
 			if(items)
 				ul
 					for item in items
@@ -51,7 +57,7 @@ block content
 				.page.link-group
 					for pageItem in pagin
 						if(pageItem.active)
-							a(href= '/search?q=' + encodeURIComponent(q) + '&start=' + pageItem.page)
+							a(href= search({ q: q, start: pageItem.page}))
 								span.active= pageItem.text
 						else
 							span.curr= pageItem.text
@@ -64,7 +70,7 @@ block content
 						for relevant in relevants
 							li
 								.bucket-item
-									a(href= '/search?q='+ encodeURIComponent(relevant))= relevant
+									a(href= search({ q: relevant }))= relevant
 
 		.clearfix
 	.container.footer

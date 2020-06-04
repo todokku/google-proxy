@@ -1,0 +1,12 @@
+extends layout
+
+block content
+    .container
+        .link-grid
+            for grouplinks in websiteList
+                if(!grouplinks.national || nationalDay)
+                    .link-row
+                        .link-bucket.link-title= grouplinks.title
+                        .link-grouplist
+                            for link in grouplinks.links
+                                a.link-bucket(href=link.href, target='_blank', class=(link.hot ? 'hot': ''))= link.title

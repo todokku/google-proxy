@@ -44,11 +44,16 @@ app.get('/', function(req, res, next){
 	res.redirect("/search");
 });
 
+
+fullUrl = (req) => {
+	return req.protocol + '://' + req.get('host') + req.originalUrl;
+};
+
 // cache.route(),
 app.get('/search', function(req, res, next){
 
 	if(!req.query.q){
-		res.render('home', {hl: google(req, res).getLanguage(), websiteList: websiteList });
+		res.render('home', {hl: google(req, res).getLanguage(), websiteList: websiteList , url: fullUrl(req)});
 		return ;
 	}
 
@@ -57,10 +62,11 @@ app.get('/search', function(req, res, next){
 	console.info( time + " " + req.query.q);
 
 	google(req, res).search().then(function(body){
+		body.url = fullUrl(req);
 		res.render("home", body);
 	}).catch(function(error){
 		console.error(error);
-		res.render('home', {hl: google(req, res).getLanguage(), websiteList: websiteList });
+		res.render('home', {hl: google(req, res).getLanguage(), websiteList: websiteList , url: fullUrl(req)});
 	});
 });
 
