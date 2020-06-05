@@ -5,37 +5,41 @@ block content
 	- let tbs = params.get('tbs');
 	- let lr = params.get('lr');
 	- let search = (query) => { let params = new URL(url).searchParams; for(const key in query){ params.set(key, query[key]); } ;  if(query['start'] === undefined) { params.delete('start'); !query['nfpr'] && params.delete('nfpr'); }   return '/search?' + params.toString(); };
-	.container.header
-		form#query(action='/search', method='get')
-			p.form-item
-			div.form-item
-				input#search-box.text-input(placeholder="" name='q', value= q, type='text', tip='关键字', tip-msg='.info-tip', succ-msg='.info-succ', req, req-msg=".info-default" autocomplete='off')
-				select(name ="tbs")
-					option(value='0' selected=(tbs === '0'))  所有结果
-					option(value='qdr:h' selected=(tbs === 'qdr:h')) 最近一小时
-					option(value='qdr:d' selected=(tbs === 'qdr:d')) 最近一天
-					option(value='qdr:w' selected=(tbs === 'qdr:w')) 最近一周
-					option(value='qdr:m' selected=(tbs === 'qdr:m')) 最近一月
-					option(value='qdr:y' selected=(tbs === 'qdr:y')) 最近一年
-					option(value='li:1' selected=(tbs === 'li:1')) 精确匹配
-				select(name ="lr")
-					option(value='' selected=(lr === '')) 所有网页
-					option(value='lang_zh-CN|lang_zh-TW' selected=(lr === 'lang_zh-CN|lang_zh-TW')) 中文网页
-					option(value='lang_zh-CN' selected=(lr === 'lang_zh-CN')) 简体中文
-				input.btn.submit-btn(type='submit', value='SO')
-				span.item-info.info-succ Go
-				span.item-info.info-tip alphabet
-				span.item-info.info-default.page.link-group.language
-					if(hl === 'en')
-						span.curr EN
-						a(href='#', data-hl="zh_CN")
-							span.active 中文
-					else
-						a(href='#' data-hl="en")
-							span.active EN
-						span.curr 中文
-				div.auto-complete-box
 
+	.header
+		form.container#query(action='/search', method='get')
+			.search-panel
+				.form-item
+					input#search-box.text-input.input-focus(placeholder="搜索关键字" name='q', value= q, type='text', tip='关键字', tip-msg='.info-tip', succ-msg='.info-succ', req, req-msg=".info-default" autocomplete='off')
+					button.submit-btn(type='submit')
+						svg.submit-icon(focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24")
+							path(d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z")
+					div.auto-complete-box
+			.control-panel
+				.form-item
+					span.item-info.info-default.page.link-group.language
+						if(hl === 'en')
+							span.curr EN
+							a(href='#', data-hl="zh_CN")
+								span.active 中文
+						else
+							a(href='#' data-hl="en")
+								span.active EN
+							span.curr 中文
+				.form-item
+					select.selector(name ="tbs")
+						option(value='0' selected=(tbs === '0'))  所有结果
+						option(value='qdr:h' selected=(tbs === 'qdr:h')) 最近一小时
+						option(value='qdr:d' selected=(tbs === 'qdr:d')) 最近一天
+						option(value='qdr:w' selected=(tbs === 'qdr:w')) 最近一周
+						option(value='qdr:m' selected=(tbs === 'qdr:m')) 最近一月
+						option(value='qdr:y' selected=(tbs === 'qdr:y')) 最近一年
+						option(value='li:1' selected=(tbs === 'li:1')) 精确匹配
+				.form-item
+					select.selector(name ="lr")
+						option(value='' selected=(lr === '')) 所有网页
+						option(value='lang_zh-CN|lang_zh-TW' selected=(lr === 'lang_zh-CN|lang_zh-TW')) 中文网页
+						option(value='lang_zh-CN' selected=(lr === 'lang_zh-CN')) 简体中文
 	.container
 		.content-left
 			.notice

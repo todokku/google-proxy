@@ -110,7 +110,7 @@ app.get('/setLanguage', function(req, res){
 
 
 app.get('/url', function(req, res){
-	res.redirect('https://s.gaggga.workers.dev/-----' + req.query.q);
+	res.redirect('https://godwine.shop/-----' + req.query.q);
 	//req.pipe(request({rejectUnauthorized: false, url: encodeURI(req.query.q)})).pipe(res);
 });
 
