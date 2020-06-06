@@ -68,10 +68,17 @@ input::-webkit-input-placeholder {
 }
 
 
+
+
+
 .header{
+	position: -webkit-sticky; /* Safari */
+	position: sticky;
+	top: -0.5rem;
+	background-color: #fff;
 	box-sizing: border-box;
 	box-shadow: 0 2px 10px rgba(0,0,0,.05);
-	padding: 1rem 0;
+	padding: 1rem 0 .5rem 0;
 }
 
 .container{
@@ -81,6 +88,7 @@ input::-webkit-input-placeholder {
 	padding: 0 1rem;
 }
 
+/*
 .container-m {
 	max-width: 1024px;
 }
@@ -92,12 +100,30 @@ input::-webkit-input-placeholder {
 .container-s{
 	max-width: 768px;
 }
+*/
+
+.search-box{
+	width: 600px;
+}
+
+.header .container {
+	justify-content: space-between;
+	overflow: hidden;
+}
 
 .control-panel {
-	display: flex;
-	flex-direction: row;
 	flex-grow: 0;
 	flex-shrink: 0;
+	display: flex;
+	flex-direction: row;
+}
+
+.search-panel {
+	flex: 1;
+}
+
+.form-item{
+	display: flex;
 }
 
 .submit-btn {
@@ -129,17 +155,17 @@ input::-webkit-input-placeholder {
 
 
 
-.form-item{
+/*.form-item{
 	zoom: 1;
-}
-.form-item:after {
+}*/
+/*.form-item:after {
 	visibility: hidden;
 	display: block;
 	font-size: 0;
 	content: " ";
 	clear: both;
 	height: 0;
-}
+}*/
 .text-label{
 	display: block;
 	float: left;
@@ -156,10 +182,7 @@ input::-webkit-input-placeholder {
 .text-input{
 	display: block;
 	position: relative;
-	float: left;
-	width: 328px;
 	padding: 12px 10px 12px 10px;
-	margin-right: 10px;
 	border: 1px solid #ddd;
 	font-size: 14px;
 	color: #333;
@@ -366,7 +389,6 @@ input::-webkit-input-placeholder {
 }
 
 .btn{
-	display: block;
 	height: 50px;
 	font-size: 16px;
 	font-weight: bold;
@@ -384,7 +406,6 @@ input::-webkit-input-placeholder {
 }
 
 .submit-btn{
-	float: left;
 	width: 100px;
 	background-color: #3f89ec;
 }
@@ -449,10 +470,6 @@ input::-webkit-input-placeholder {
 	height:0;
 }
 
-
-#search-box{
-	margin-right: 0;
-}
 
 
 #query .submit-btn{
