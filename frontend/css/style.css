@@ -175,6 +175,10 @@ input::-webkit-input-placeholder {
     color: #666;
 }
 
+.selector:hover .label{
+
+}
+
 .selector .dropdown-arrow{
 	border-color: #70757a transparent;
 	border-style: solid;
@@ -214,8 +218,9 @@ input::-webkit-input-placeholder {
 .text-input{
 	display: block;
 	position: relative;
-	padding: 12px 10px 12px 10px;
-	border: 1px solid #ddd;
+	padding: 12px 110px 12px 10px;
+	box-shadow:  0 0 15px rgba(0, 0, 0, 0.15);
+	border: none;
 	font-size: 14px;
 	color: #333;
 	transition: .3s;
@@ -226,7 +231,8 @@ input::-webkit-input-placeholder {
 }
 
 .input-focus{
-	border-color:#488ee7;
+	box-shadow:  0 0 15px rgba(0,102,204, 0.5);
+	/*border-color:#488ee7;*/
 }
 
 
@@ -234,9 +240,11 @@ input::-webkit-input-placeholder {
 
 
 .submit-btn{
+	z-index: 1;
+	margin-left: -100px;
 	width: 100px;
 	background-color: #3f89ec;
-	height:42px;
+	height:40px;
 	border-radius: 0;
 	margin-right: 10px;
 }

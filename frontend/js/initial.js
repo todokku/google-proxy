@@ -1,10 +1,10 @@
 (function($) {
 	$(function() {
-	/*	$.prettyform({
+		$.prettyform({
 			id: "query",
 			//required
 			active: false //任一表单值发生改变，每个表单项都重新检测，使用eq时推荐开启 默认false
-		});*/
+		});
 /*
 		let requestId = null;
 		$('#search-box').keyup(function() {
