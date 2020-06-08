@@ -8,9 +8,9 @@ block content
 
 
         form.header.container#query(action='/search', method='get')
+            .logo soga
             .search-panel
                 .form-item
-                    .logo soga
                     input.search-box.text-input(placeholder="搜索关键字" name='q', value= q, type='text' req autocomplete='off')
                     button.submit-btn(type='submit')
                         svg.submit-icon(focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24")
