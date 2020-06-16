@@ -41,7 +41,7 @@ app.use('/', express.static(path.join(__dirname, 'frontend')));
 
 
 app.get('/', function(req, res, next){
-	res.redirect("/search");
+	res.render('index', { websiteList: websiteList });
 });
 
 
@@ -53,7 +53,7 @@ fullUrl = (req) => {
 app.get('/search', function(req, res, next){
 
 	if(!req.query.q){
-		res.render('home', {hl: google(req, res).getLanguage(), websiteList: websiteList , url: fullUrl(req)});
+		res.render('index', { websiteList: websiteList });
 		return ;
 	}
 

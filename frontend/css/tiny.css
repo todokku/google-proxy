@@ -1,82 +1,28 @@
-.container{
-    overflow: hidden;
-    width: 100% !important;
+.header, .search-panel{
+    min-width: inherit !important;
+    flex-grow: 1;
+    padding: 0.25rem;
 }
 
-.container .content-left{
-    float: left;
-    padding-left: 10px;
-    width: 95% !important;
+.search-panel .search-box {
+    width: inherit !important;
+    flex: 1;
 }
 
-.container .content-right{
-    float: left;
-    padding-left: 10px;
-    width: 95% !important;
+.logo, .control-panel {
+    display: none;
 }
 
-.page.link-group {
-    padding: 10px;
-    overflow-x: auto;
+.header ~ .container {
+    flex-direction: column;
+}
+.content-left {
+    width: inherit !important;
+    margin-left: 1rem;
+
 }
 
-::-webkit-scrollbar {
-  height: 2px;
+.content-left, .content-right {
+    flex: 1;
 }
 
-.auto-complete-box{
-    left: 20px;
-    top: 52px;
-}
-
-
-.flip-container{
-    display:none;
-}
-
-#query{
-    padding: 0;
-}
-
-#search-box{
-    float:left;
-    margin-left: 20px;
-    width:60% !important;
-}
-
-#query input.submit-btn{    
-    float:left;
-    width:30% !important;
-}
-
-.item-info{
-    display:none !important;
-}
-
-.form-item{
-    margin-bottom: 10px;
-}
-
-.header{
-    height: 65px;
-}
-
-.content .page ul.newstab {
-    float: left;
-    width: 50%;
-}
-
-.content .page ul.newstab .newsarea{
-    margin: 10px 5px 10px 5px;
-}
-
-.newsarea{
-    margin: 5px;
-    border: 0px;
-    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.33);
-    border-radius: 3px;
-}
-
-.search-item {
-    line-height: 20px;
-}

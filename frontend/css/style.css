@@ -77,6 +77,7 @@ input::placeholder {
 
 .header{
 	position: sticky;
+	top: 0;
 	background-color: #fff;
 	box-sizing: border-box;
 	box-shadow: 0 0 10px 1px rgba(0,0,0,.05);
@@ -86,6 +87,7 @@ input::placeholder {
 }
 
 .search-panel {
+	position: relative;
 	flex-grow: 0;
 	flex-shrink: 0;
 }
@@ -95,6 +97,7 @@ input::placeholder {
 }
 
 .control-panel {
+	padding-left: 1rem;
 	flex-grow: 0;
 	flex-shrink: 0;
 	display: flex;
@@ -121,7 +124,6 @@ input::placeholder {
 }
 
 
-
 .logo {
 	cursor: default;
 	word-break: keep-all;
@@ -130,7 +132,7 @@ input::placeholder {
 	min-width: 8rem;
 	color: #fff;
 	box-sizing: border-box;
-	text-shadow: 0 0 2px rgba(0, 0, 0, .8);
+	text-shadow: 0 0 2px #004d99;
 	padding: 0 1rem 1rem 2rem;
 	transition: transform .2s;
 }
@@ -174,7 +176,7 @@ input::placeholder {
     z-index: 99;
     /**border: 1px solid #e1e1e1;**/
 	box-shadow:  0 0 8px rgba(0, 0, 0, 0.08);
-	top: calc(100% + .5rem);
+	top: calc(100% + .75rem);
     word-break: keep-all;
     background-color: #fff;
 }
@@ -212,7 +214,7 @@ input::placeholder {
 
 .search-panel:hover .text-input, .text-input:focus{
 	background-color: #fff;
-	box-shadow:  0 0 6px 3px rgba(0,102,204, 0.2);
+	box-shadow:  0 0 1px 1px rgba(0,102,204, 0.2);
 }
 
 .search-panel:hover .submit-icon, .text-input:focus ~ .submit-btn > .submit-icon{
@@ -253,7 +255,6 @@ input::placeholder {
 	/*	background-color: #3f89ec;*/
 	height:40px;
 	border-radius: 0;
-	margin-right: 10px;
 }
 
 
@@ -287,47 +288,49 @@ input::placeholder {
 .auto-complete-box {
 	position: absolute;
 	left: 0;
-	top: 42px;
+	right: 0;
+	top: calc(100% + 1px);
 	z-index: 999;
-	color: #777;
-	background: #fefefe;
-	border: 1px solid #ddd;
+	box-shadow:  0 0 8px rgba(0, 0, 0, 0.08);
+	word-break: keep-all;
+	background-color: #fff;
+	color: #666;
 }
 
-.auto-complete-item{
-  line-height: 36px;
-  height: 36px;
-  min-width: 307px;
-  padding: 0 10px;
-  border-bottom: 1px dotted #ddd;
+.auto-complete-item {
+	cursor: pointer;
+	padding: .5rem 1rem;
 }
 
 .auto-complete-item:hover{
-	background: #fcfcfc;
-	cursor: pointer;
+	background-color: #f3f9ff;
+
 }
 
-.page span{
+.link-group {
+}
+
+
+.link-group span{
+	border: 1px solid #f1f3ff;
+	display: inline-block;
 	box-sizing: border-box;
 	min-width: 34px;
 	padding: 0 10px;
+	line-height: 34px;
+	height: 34px;
+
+
 }
 
 .link-group span.active {
-	display: inline-block;
-	border: 1px solid #e1e2e3;
+/*	border: 1px solid #e1e2e3;*/
 	cursor: pointer;
-	height: 34px;
 }
 
-.link-group .curr{
-	display: inline-block;
+.link-group span.curr{
 	text-align: center;
-	border: 1px solid #e1e2e3;
-	line-height: 34px;
-	height: 34px;
-	overflow: hidden;
-	background: white;
+	/*border: 1px solid #e1e2e3;*/
 	margin-right: 9px;
 }
 
@@ -336,13 +339,12 @@ input::placeholder {
 	text-align: center;
 	line-height: 36px;
 	text-decoration: none;
-	overflow: hidden;
 	background: white;
 	margin-right: 9px;
 }
+
 .link-group a:hover span.active{
-	background:#f2f8ff;
-	border:1px solid #38f;
+	background-color: rgba(242, 248, 255, .5);
 }
 
 .link-group{
@@ -400,10 +402,6 @@ input::placeholder {
 }
 
 
-.footer{
-	margin: auto;
-	padding-bottom: 50px;
-}
 
 .relevants{
 	padding: 20px 0 ;
@@ -462,16 +460,15 @@ div ~ a.soft-link {
 
 
 .link-grid{
-    border: 1px solid #e9e9e9;
-    padding: 2rem;
+    padding: 1rem 0 0 3rem;
 }
 
 .link-grid .link-row:first-child{
-    border-top: 1px solid #e9e9e9;
+    border-top: 1px solid #f3f8ff;
 }
 
 .link-grid .link-row{
-    border-bottom: 1px solid #e9e9e9;
+    border-bottom: 1px solid #f3f8ff;
     display: flex;
     align-items: flex-start;
 }
@@ -490,7 +487,7 @@ div ~ a.soft-link {
 
 
 .link-grid .link-bucket:hover:not(.link-title){
-    background: #f5f5f5;
+    background: #f3f8ff;
 	cursor: pointer;
 }
 
@@ -502,4 +499,32 @@ div ~ a.soft-link {
 .link-grid a.link-bucket.hot{
 	color: red;
 	font-weight: bolder;
+}
+
+
+.footer{
+	justify-content: center;
+	color: #7a869a;
+	padding: 1rem 0;
+	border-top: 1px solid #f3f8ff;
+}
+
+.search-container {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	height: 100%;
+}
+
+.search-header {
+	margin-bottom: 1rem;
+}
+
+.search-footer {
+	position: absolute;
+	background: #fff;
+	bottom: 0;
+	left: 0;
+	right: 0;
 }
