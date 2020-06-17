@@ -127,10 +127,10 @@ input::placeholder {
 .logo {
 	cursor: default;
 	word-break: keep-all;
-	margin-top: -15px;
 	font-size: 36px;
 	font-weight: 700;
 	min-width: 8rem;
+    align-self: flex-start;
 	color: #fff;
 	box-sizing: border-box;
 	text-shadow: 0 0 2px #004d99;
@@ -512,23 +512,24 @@ div ~ a.soft-link {
 }
 
 .search-container {
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	flex-direction: column;
-	height: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    min-height: 100%;
 }
 
+
+
 .search-header {
-	background-color: #fff;
-	padding: 1rem 0;
-	align-items: center;
+    flex: 1;
+}
+
+.search-content {
+    flex: 1;
 }
 
 .search-footer {
-	position: absolute;
-	background: #fff;
-	bottom: 0;
-	left: 0;
-	right: 0;
+    flex-grow: 0;
+    align-self: stretch;
 }
+
