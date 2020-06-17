@@ -66,7 +66,7 @@ app.get('/search', function(req, res, next){
 		res.render("home", body);
 	}).catch(function(error){
 		console.error(error);
-		res.render('home', {hl: google(req, res).getLanguage(), websiteList: websiteList , url: fullUrl(req)});
+		res.render('index', { websiteList: websiteList });
 	});
 });
 
@@ -93,20 +93,6 @@ app.get('/complete/search', function(req, res){
 
 });
 
-
-app.get('/setLanguage', function(req, res){
-	let redirectUrl = req.query.redirectUrl || "/search";
-	if(['en', 'zh_CN'].indexOf(req.query.hl) === -1){
-		res.redirect(redirectUrl);
-		return ;
-	}
-	google(req, res).setLanguage(req.query.hl).then(function(){
-		res.redirect(redirectUrl);
-	}).catch(function(error){
-		console.error(error);
-		res.redirect(redirectUrl);
-	});
-});
 
 
 app.get('/url', function(req, res){
