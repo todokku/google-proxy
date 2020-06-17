@@ -1,3 +1,8 @@
+::-webkit-scrollbar {
+    width: 3px;
+    height: 3px;
+}
+
 .header, .search-panel{
     min-width: inherit !important;
     flex-grow: 1;
@@ -9,20 +14,33 @@
     flex: 1;
 }
 
-.logo, .control-panel {
+.logo{
+    padding-left: .5rem;
+    padding-right: .5rem;
+    min-width:inherit !important;
+}
+
+.control-panel {
     display: none;
 }
 
 .header ~ .container {
     flex-direction: column;
+    align-items: stretch;
 }
-.content-left {
-    width: inherit !important;
-    margin-left: 1rem;
 
-}
 
 .content-left, .content-right {
+    width: inherit !important;
     flex: 1;
+    margin:0 1rem;
 }
 
+.page {
+    overflow-x: scroll;
+}
+
+
+.footer{
+    align-items: center !important;
+}

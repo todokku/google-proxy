@@ -37,8 +37,8 @@ a:hover{
 
 /*baidu scrollar bar*/
 ::-webkit-scrollbar {
-	width: 8px;
-	height: 14px;
+	width: 4px;
+	height: 12px;
 }
 
 ::-webkit-scrollbar-thumb {
@@ -82,8 +82,8 @@ input::placeholder {
 	box-sizing: border-box;
 	box-shadow: 0 0 10px 1px rgba(0,0,0,.05);
 	padding: 1rem 0;
+	align-items: center;
 	min-width: 1280px;
-	align-items: center !important;
 }
 
 .search-panel {
@@ -112,7 +112,7 @@ input::placeholder {
 }
 
 .content-right {
-	padding-left: 1rem;
+	margin-left: 1rem;
 	flex-grow: 0;
 	flex-shrink: 0;
 	width: 400px;
@@ -127,13 +127,14 @@ input::placeholder {
 .logo {
 	cursor: default;
 	word-break: keep-all;
+	margin-top: -15px;
 	font-size: 36px;
 	font-weight: 700;
 	min-width: 8rem;
 	color: #fff;
 	box-sizing: border-box;
 	text-shadow: 0 0 2px #004d99;
-	padding: 0 1rem 1rem 2rem;
+	padding: 0 1rem 0 2rem;
 	transition: transform .2s;
 }
 
@@ -503,6 +504,7 @@ div ~ a.soft-link {
 
 
 .footer{
+	align-items: center;
 	justify-content: center;
 	color: #7a869a;
 	padding: 1rem 0;
@@ -518,7 +520,9 @@ div ~ a.soft-link {
 }
 
 .search-header {
-	margin-bottom: 1rem;
+	background-color: #fff;
+	padding: 1rem 0;
+	align-items: center;
 }
 
 .search-footer {
