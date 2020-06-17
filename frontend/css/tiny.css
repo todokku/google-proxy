@@ -6,7 +6,10 @@
 .header, .search-panel{
     min-width: inherit !important;
     flex-grow: 1;
-    padding: 0.25rem;
+}
+
+.header {
+    padding: .5rem;
 }
 
 .search-panel .search-box {
@@ -43,4 +46,10 @@
 
 .footer{
     align-items: center !important;
+}
+
+#query {
+    padding: .5rem;
+    justify-content: center;
+    align-items: center;
 }
