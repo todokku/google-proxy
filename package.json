@@ -11,19 +11,13 @@
   "license": "ISC",
   "dependencies": {
     "body-parser": "^1.14.1",
-    "cheerio": "^0.19.0",
-    "commander": "^2.8.1",
-    "content-disposition": "^0.5.0",
-    "cookie-parser": "1.4.0",
+    "cheerio": "^0.22.0",
+    "commander": "^5.1.0",
+    "cookie-parser": "^1.4.5",
     "express": "^4.13.1",
-    "express-redis-cache": "^0.3.0",
-    "global-tunnel": "^1.2.0",
     "https-proxy-agent": "^5.0.0",
-    "iconv-lite": "^0.4.19",
-    "moment": "^2.18.1",
-    "pug": "^2.0.4",
-    "recast": "^0.18.8",
-    "request": "^2.60.0",
-    "xml-mapping": "^1.7.1"
+    "moment": "^2.26.0",
+    "pug": "^3.0.0",
+    "recast": "^0.19.1"
   }
 }
