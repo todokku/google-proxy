@@ -17,9 +17,19 @@
     flex: 1;
 }
 
+.text-input{
+    padding-left: 5rem;
+}
+
 .logo{
-    padding-left: .5rem;
-    padding-right: .5rem;
+    position: absolute;
+    left: 1rem;
+    top: .75rem;
+    padding: 0;
+    line-height: 100%;
+    font-size: 24px;
+    z-index: 999;
+
     min-width:inherit !important;
 }
 
@@ -49,6 +59,7 @@
 }
 
 #query {
+    position: relative;
     padding: .5rem;
     justify-content: center;
     align-items: center;
