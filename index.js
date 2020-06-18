@@ -5,6 +5,7 @@ const cookieParser = require('cookie-parser');
 const bodyParser = require('body-parser');
 
 const google = require('./lib/google');
+const baidu = require('./lib/baidu');
 const moment = require('moment');
 
 let websiteList = require( path.join(__dirname, 'website.json') );
@@ -93,6 +94,14 @@ app.get('/complete/search', function(req, res){
 
 });
 
+app.get('/top', (req, res) => {
+	baidu(req, res).top().then(json => {
+		res.send(json);
+	}).catch(function(error){
+		console.error(error);
+		res.send(error);
+	});
+});
 
 
 app.get('/url', function(req, res){

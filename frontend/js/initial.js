@@ -7,6 +7,41 @@
 		});
 
 		let requestId = null;
+
+		let processor = function(data){
+			if (this.requestId !== requestId) {
+				return;
+			}
+			var $autocomplete = $('.auto-complete-box');
+			$autocomplete.empty();
+
+			$(data[1]).each(function(i, text) {
+
+				let pureText = $("<span></span>").html(text[0]).text();
+				var target = $('<div></div>').attr('class', 'auto-complete-item').text(pureText).click(function() {
+					$('.search-box').val($(this).text());
+					$('#query').submit();
+				});
+
+				$autocomplete.append(target);
+			});
+
+			$autocomplete.show();
+		};
+
+		$('.search-box').focusin(function() {
+			if($(this).val()){
+				return ;
+			}
+			requestId = new Date().getTime();
+			$.ajax({
+				url: '/top',
+				type: 'get',
+				dataType: 'json',
+				requestId: requestId
+			}).done(processor);
+		});
+
 		$('.search-box').keyup(function() {
 			requestId = new Date().getTime();
 			$.ajax({
@@ -14,26 +49,8 @@
 				type: 'get',
 				dataType: 'json',
 				requestId: requestId
-			}).done(function(data) {
-				if (this.requestId !== requestId) {
-					return;
-				}
-				var $autocomplete = $('.auto-complete-box');
-				$autocomplete.empty();
+			}).done(processor);
 
-				$(data[1]).each(function(i, text) {
-
-					let pureText = $("<span></span>").html(text[0]).text();
-					var target = $('<div></div>').attr('class', 'auto-complete-item').text(pureText).click(function() {
-						$('.search-box').val($(this).text());
-						$('#query').submit();
-					});
-
-					$autocomplete.append(target);
-				});
-
-				$autocomplete.show();
-			});
 		});
 
 		$('.auto-complete-box').hide();
