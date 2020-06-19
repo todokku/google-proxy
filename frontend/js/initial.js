@@ -33,7 +33,6 @@
 			if($(this).val()){
 				return ;
 			}
-			e.stopPropagation();
 			requestId = new Date().getTime();
 			$.ajax({
 				url: '/top',
@@ -42,7 +41,6 @@
 				requestId: requestId
 			}).done(processor);
 		}).keyup(function() {
-			e.stopPropagation();
 			requestId = new Date().getTime();
 			$.ajax({
 				url: '/complete/search?q=' + encodeURIComponent($(this).val()),
