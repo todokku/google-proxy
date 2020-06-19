@@ -29,10 +29,11 @@
 			$autocomplete.show();
 		};
 
-		$('.search-box').focusin(function() {
+		$('.search-box').click(function(e) {
 			if($(this).val()){
 				return ;
 			}
+			e.stopPropagation();
 			requestId = new Date().getTime();
 			$.ajax({
 				url: '/top',
@@ -40,9 +41,8 @@
 				dataType: 'json',
 				requestId: requestId
 			}).done(processor);
-		});
-
-		$('.search-box').keyup(function() {
+		}).keyup(function() {
+			e.stopPropagation();
 			requestId = new Date().getTime();
 			$.ajax({
 				url: '/complete/search?q=' + encodeURIComponent($(this).val()),
@@ -55,11 +55,9 @@
 
 		$('.auto-complete-box').hide();
 
-		$(document).click(function(e) {
-			$('.auto-complete-box').empty().hide();
-		});
 
         $(window).click(function() {
+			$('.auto-complete-box').empty().hide();
             $('.option-group').hide();
         });
 
