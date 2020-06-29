@@ -34,7 +34,7 @@ block content
                 option(value='' selected=(lr === '')) 所有网页
                 option(value='lang_zh-CN|lang_zh-TW' selected=(lr === 'lang_zh-CN|lang_zh-TW')) 中文网页
                 option(value='lang_zh-CN' selected=(lr === 'lang_zh-CN')) 简体中文
-    .container
+    .container.content
         .content-left
             .notice
 
@@ -51,6 +51,8 @@ block content
                 ul
                     for item in items
                         include item
+            if(notResult)
+                div!= notResult
             if(pagin)
                 .page.link-group
                     for pageItem in pagin
@@ -59,8 +61,7 @@ block content
                                 span.active= pageItem.text
                         else
                             span.curr= pageItem.text
-            if(notResult)
-                div!= notResult
+
         .content-right
             if(relevants && relevants.length)
                 div.relevants
