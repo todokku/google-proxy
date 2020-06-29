@@ -3,8 +3,11 @@
     height: 3px;
 }
 
-.header, .search-panel{
+.header, .content, .footer, .search-panel{
     min-width: inherit !important;
+}
+
+.search-panel {
     flex-grow: 1;
 }
 
@@ -18,7 +21,7 @@
 }
 
 .text-input{
-    padding-left: 5rem;
+    padding-left: 4.5rem;
 }
 
 .logo{

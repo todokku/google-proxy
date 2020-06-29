@@ -56,7 +56,6 @@
 
         $(window).click(function() {
 			$('.auto-complete-box').empty().hide();
-            $('.option-group').hide();
         });
 
 		$('select').each((index, item) => {
@@ -70,14 +69,10 @@
 			selector.append(dropdownArrow);
 			let optionGroup = $('<div class="option-group"></div>');
 			selector.hover((e) =>{
-				$('.option-group').not(optionGroup).hide();
 				optionGroup.show();
-			});
-			optionGroup.mouseleave(function(e){
-				e.stopPropagation();
+			}, () =>{
 				optionGroup.hide();
 			});
-
 			optionGroup.hide();
 			item.find('option').each((idx, option) => {
 				let text = $(option).text();
